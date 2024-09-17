@@ -1,0 +1,314 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Help Center {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock %}
+
+{% block body_class %} help-center bg-gray-200 {% endblock %}
+
+{% block content %}
+
+  {% include 'includes/navigation-transparent.html' %}
+
+  <!-- -------- START HEADER 3 w/ image on background ------- -->
+  <header class="position-relative">
+    <div class="page-header min-vh-50" style="background-image: url('{{ config.ASSETS_ROOT }}/img/bg3.jpg');" loading="lazy">
+      <span class="mask bg-gradient-dark opacity-6"></span>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 col-sm-9 text-center mx-auto mb-4">
+            <h2 class="text-white mb-3">How can we help you?</h2>
+            <button type="button" class="btn bg-gradient-info mb-0 mx-auto">Search issue</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- -------- END HEADER 3 w/ image on background ------- -->
+
+  <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6">
+    <!-- -------- START Features w/ title and 3 infos -------- -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 mx-auto text-center pb-4">
+            <h4 class="text-gradient text-info">Social Analytics</h4>
+            <h2>Turn your idea into a startup</h2>
+            <p class="lead">We’re constantly trying to express ourselves and actualize our dreams. If you have the opportunity to play </p>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="p-3 text-center">
+              <i class="material-icons text-gradient text-info text-5xl">groups</i>
+              <h5 class="mt-2">Check our team</h5>
+              <p class="mb-0">We get insulted by others, lose trust for those others. We get back here to follow my dreams</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="p-3 text-center">
+              <i class="material-icons text-gradient text-info text-5xl">support_agent</i>
+              <h5 class="mt-2">Support 24/7</h5>
+              <p class="mb-0">We get insulted by others, lose trust for those others. We get back here to follow my dreams</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mx-md-auto">
+            <div class="p-3 text-center">
+              <i class="material-icons text-gradient text-info text-5xl">update</i>
+              <h5 class="mt-2">Unlimited revisions</h5>
+              <p class="mb-0">We get insulted by others, lose trust for those others. We get back here to follow my dreams</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- -------- END Features w/ title and 3 infos -------- -->
+    <section class="py-lg-5 mt-lg-5">
+      <div class="container">
+        <div class="row my-5">
+          <div class="col-md-6 mx-auto text-center">
+            <h2>Frequently Asked Questions</h2>
+            <p>A lot of people don’t appreciate the moment until it’s passed. I'm not trying my hardest, and I'm not trying to do </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-10 mx-auto">
+            <div class="accordion" id="accordionRental">
+              <div class="accordion-item mb-3">
+                <h5 class="accordion-header" id="headingOne">
+                  <button class="accordion-button border-bottom font-weight-bold text-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    How do I order?
+                    <i class="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0"></i>
+                    <i class="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0"></i>
+                  </button>
+                </h5>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionRental">
+                  <div class="accordion-body text-sm opacity-8">
+                    We’re not always in the position that we want to be at. We’re constantly growing. We’re constantly making mistakes. We’re constantly trying to express ourselves and actualize our dreams. If you have the opportunity to play this game
+                    of life you need to appreciate every moment. A lot of people don’t appreciate the moment until it’s passed.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item mb-3">
+                <h5 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button border-bottom font-weight-bold text-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    How can i make the payment?
+                    <i class="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0"></i>
+                    <i class="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0"></i>
+                  </button>
+                </h5>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionRental">
+                  <div class="accordion-body text-sm opacity-8">
+                    It really matters and then like it really doesn’t matter. What matters is the people who are sparked by it. And the people who are like offended by it, it doesn’t matter. Because it's about motivating the doers. Because I’m here to follow my dreams and inspire other people to follow their dreams, too.
+                    <br>
+                    We’re not always in the position that we want to be at. We’re constantly growing. We’re constantly making mistakes. We’re constantly trying to express ourselves and actualize our dreams. If you have the opportunity to play this game of life you need to appreciate every moment. A lot of people don’t appreciate the moment until it’s passed.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item mb-3">
+                <h5 class="accordion-header" id="headingThree">
+                  <button class="accordion-button border-bottom font-weight-bold text-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    How much time does it take to receive the order?
+                    <i class="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0"></i>
+                    <i class="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0"></i>
+                  </button>
+                </h5>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionRental">
+                  <div class="accordion-body text-sm opacity-8">
+                    The time is now for it to be okay to be great. People in this world shun people for being great. For being a bright color. For standing out. But the time is now to be okay to be the greatest you. Would you believe in what you believe in, if you were the only one who believed it?
+                    If everything I did failed - which it doesn't, it actually succeeds - just the fact that I'm willing to fail is an inspiration. People are so scared to lose that they don't even try. Like, one thing people can't say is that I'm not trying, and I'm not trying my hardest, and I'm not trying to do the best way I know how.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item mb-3">
+                <h5 class="accordion-header" id="headingFour">
+                  <button class="accordion-button border-bottom font-weight-bold text-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    Can I resell the products?
+                    <i class="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0"></i>
+                    <i class="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0"></i>
+                  </button>
+                </h5>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionRental">
+                  <div class="accordion-body text-sm opacity-8">
+                    I always felt like I could do anything. That’s the main thing people are controlled by! Thoughts- their perception of themselves! They're slowed down by their perception of themselves. If you're taught you can’t do anything, you won’t do anything. I was taught I could do everything.
+                    <br><br>
+                    If everything I did failed - which it doesn't, it actually succeeds - just the fact that I'm willing to fail is an inspiration. People are so scared to lose that they don't even try. Like, one thing people can't say is that I'm not trying, and I'm not trying my hardest, and I'm not trying to do the best way I know how.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item mb-3">
+                <h5 class="accordion-header" id="headingFifth">
+                  <button class="accordion-button border-bottom font-weight-bold text-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFifth" aria-expanded="false" aria-controls="collapseFifth">
+                    Where do I find the shipping details?
+                    <i class="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0"></i>
+                    <i class="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0"></i>
+                  </button>
+                </h5>
+                <div id="collapseFifth" class="accordion-collapse collapse" aria-labelledby="headingFifth" data-bs-parent="#accordionRental">
+                  <div class="accordion-body text-sm opacity-8">
+                    There’s nothing I really wanted to do in life that I wasn’t able to get good at. That’s my skill. I’m not really specifically talented at anything except for the ability to learn. That’s what I do. That’s what I’m here for. Don’t be afraid to be wrong because you can’t learn anything from a compliment.
+                    I always felt like I could do anything. That’s the main thing people are controlled by! Thoughts- their perception of themselves! They're slowed down by their perception of themselves. If you're taught you can’t do anything, you won’t do anything. I was taught I could do everything.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-7">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 col-10 ms-auto me-auto text-center">
+            <div class="p-3 info-hover-warning">
+              <div class="icon icon-shape bg-gradient-primary shadow icon-shape-circle text-primary">
+                <i class="fa fa-cogs"></i>
+              </div>
+            </div>
+            <h3 class="mt-4">How To Handle Them</h3>
+            <p>We’re constantly trying to express ourselves and actualize our dreams. Don't stop.</p>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-md-4 ms-auto my-auto">
+            <div class="cursor-pointer">
+              <div class="card card-background">
+                <div class="full-background" style="background-image: url('{{ config.ASSETS_ROOT }}/img/examples/color1.jpg')" loading="lazy"></div>
+                <div class="card-body pt-7 text-center">
+                  <p class="text-white text-uppercase">Website visitors</p>
+                  <h3 class="text-white mb-0">The Best Productivity Apps on Market</h3>
+                  <p class="text-white opacity-8">As we live, our hearts turn colder. Cause pain is what we go through as we become older. We get insulted by others, lose trust for those others.</p>
+                  <button type="button" class="btn btn-white btn-sm mt-3">Get Started</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5 me-auto my-auto ms-md-5">
+            <div class="p-3 info-horizontal d-flex">
+              <div>
+                <h5>1. Listen to Social Conversations</h5>
+                <p>
+                  Gain access to the demographics, psychographics, and location of unique people who are interested and talk about your brand.
+                </p>
+              </div>
+            </div>
+            <div class="p-3 info-horizontal d-flex">
+              <div>
+                <h5>2. Performance Analyze</h5>
+                <p>
+                  Unify data from Facebook, Instagram, Twitter, LinkedIn, and Youtube to gain rich insights from easy-to-use reports.
+                </p>
+              </div>
+            </div>
+            <div class="p-3 info-horizontal d-flex">
+              <div>
+                <h5>3. Social Conversions</h5>
+                <p>
+                  Track actions taken on your website that originated from social, and understand the impact on your bottom line.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="horizontal dark my-sm-6 my-3 mx-7">
+        <div class="row">
+          <div class="col-md-5 ms-auto my-auto">
+            <div class="p-3 info-horizontal d-flex">
+              <div>
+                <h5>1. Always In Sync</h5>
+                <p>
+                  No matter where you are, Trello stays in sync across all of your devices.
+                </p>
+              </div>
+            </div>
+            <div class="p-3 info-horizontal d-flex">
+              <div>
+                <h5>2. Work With Any Team</h5>
+                <p>
+                  Whether it’s for work or even the next family vacation, Trello helps your team.
+                </p>
+              </div>
+            </div>
+            <div class="p-3 info-horizontal d-flex">
+              <div>
+                <h5>3. A Productivity Platform</h5>
+                <p>
+                  Integrate the apps your team already uses directly into your workflow.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 me-auto my-auto ms-md-5">
+            <div class="cursor-pointer">
+              <div class="card card-background">
+                <div class="full-background" style="background-image: url('{{ config.ASSETS_ROOT }}/img/examples/color3.jpg')" loading="lazy"></div>
+                <div class="card-body pt-7 text-center">
+                  <p class="text-white text-uppercase">Social activities</p>
+                  <h3 class="text-white up mb-0">Working on Wallstreet is Not So Easy</h3>
+                  <p class="text-white opacity-8">There’s nothing I really wanted to do in life that I wasn’t able to get good at. I’m not really specifically talented at anything except for the ability to learn.</p>
+                  <button type="button" class="btn btn-white btn-sm mt-3">Get Started</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-sm-7">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mx-auto text-center">
+            <div class="ms-3 mb-md-5">
+              <h3>We are here for you</h3>
+              <p>
+                For further questions, including partnership opportunities
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="card card-plain">
+              <form id="contact-form" method="post" autocomplete="off">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="input-group input-group-static mb-4">
+                        <label>Full Name</label>
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col-md-6 ps-md-2">
+                      <div class="input-group input-group-static mb-4">
+                        <label>Email</label>
+                        <input type="email" class="form-control">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group mb-4 mt-md-0 mt-4">
+                    <div class="input-group input-group-static mb-4">
+                      <label>What can we help you?</label>
+                      <textarea name="message" class="form-control" id="message" rows="6" placeholder="Describe your problem in at least 250 characters"></textarea>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 text-center">
+                      <button type="submit" class="btn bg-gradient-dark mt-4">Send Message</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+  {% include 'includes/footer-5.html' %}
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock %}

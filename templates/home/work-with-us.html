@@ -1,0 +1,235 @@
+{% extends "base.html" %}
+
+{% block title %}Work With Us{% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}
+<!-- Add any custom stylesheets if necessary -->
+{% endblock %}
+
+{% block body_class %} work-with-us bg-gray-200 {% endblock %}
+
+{% block content %}
+
+  {% include 'includes/navigation.html' %}
+
+  <!-- -------- START HEADER 1 w/ text and image on right ------- -->
+  <header>
+    <div class="page-header min-vh-75" style="background-image: url('{% static "img/example-photo.jpg" %}');" loading="lazy">
+      <span class="mask bg-gradient-info"></span>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-7 d-flex justify-content-center text-md-start text-center flex-column">
+            <h2 class="mb-4 text-white">Evolution Continues</h2>
+            <p class="lead pe-md-5 me-md-5 mb-4 text-white opacity-8">The problem happens when we have multiple desires. When we have fuzzy desires. When we want to do ten different things and we’re not clear about which is the one we care about. </p>
+            <div class="buttons">
+              <button type="button" class="btn bg-gradient-dark mt-4">Get Started</button>
+              <button type="button" class="btn text-white shadow-none mt-4">Read more</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- -------- END HEADER 1 w/ text and image on right ------- -->
+
+  <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6 mb-5">
+    <!-- -------- START Features w/ image on left & title & text & 3 cols on soft background -------- -->
+    <section class="py-md-7">
+      <div class="container">
+        <div class="row">
+          <div class="col-3 position-relative max-width-300 mx-auto">
+            <div class="blur-shadow-image">
+              <img class="w-100 h-100 border-radius-xl position-absolute d-xl-block d-none" src="{% static 'img/examples/clem-onojeghuou.jpg' %}" loading="lazy" alt="image">
+            </div>
+          </div>
+          <div class="col-lg-9 ms-auto">
+            <div class="row">
+              <div class="col-12 col-md-7">
+                <div class="p-3 text-start border-radius-lg">
+                  <h2 class="mt-5">Material Design Values</h2>
+                  <p class="text-dark text-lg mt-3">
+                    <span class="font-weight-bold">The time</span>
+                    is now for it to be okay to be great. People in this world shun people for being great.
+                    For being a bright color.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl-3 col-md-4 py-3">
+                <div class="p-3 text-start">
+                  <i class="material-icons text-4xl text-gradient text-info">spa</i>
+                  <h5 class="mt-3">Give your best</h5>
+                  <p>Creativity starts with an empty calendar and ends with a full one.</p>
+                </div>
+              </div>
+              <div class="col-xl-3 col-md-4 py-3">
+                <div class="p-3 text-start">
+                  <i class="material-icons text-4xl text-gradient text-info">school</i>
+                  <h5 class="mt-3">Learn new things</h5>
+                  <p>We get insulted by others, lose trust for those we get back.</p>
+                </div>
+              </div>
+              <div class="col-xl-3 col-md-4 py-3">
+                <div class="p-3 text-start">
+                  <i class="material-icons text-4xl text-gradient text-info">emoji_people</i>
+                  <h5 class="mt-3">Never give up</h5>
+                  <p>When playing, surround yourself with people happier than you.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- -------- END Features w/ image on left & title & text & 3 cols on soft background -------- -->
+
+    <!-- -------   START PRE-FOOTER 6 - title & description and input    -------- -->
+    <div class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-8 mx-auto text-center">
+            <h3 class="font-weight-bolder">More than 500 brands trust Material</h3>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-lg-2 col-md-4 col-6 mb-4">
+            <img class="w-100 opacity-9" src="{% static 'img/logos/medium-logos/logo-coinbase.svg' %}" alt="logo">
+          </div>
+          <div class="col-lg-2 col-md-4 col-6 mb-4">
+            <img class="w-100 opacity-9" src="{% static 'img/logos/medium-logos/logo-nasa.svg' %}" alt="logo">
+          </div>
+          <div class="col-lg-2 col-md-4 col-6 mb-4">
+            <img class="w-100 opacity-9" src="{% static 'img/logos/medium-logos/logo-netflix.svg' %}" alt="logo">
+          </div>
+          <div class="col-lg-2 col-md-4 col-6 mb-4">
+            <img class="w-100 opacity-9" src="{% static 'img/logos/medium-logos/logo-pinterest.svg' %}" alt="logo">
+          </div>
+          <div class="col-lg-2 col-md-4 col-6 mb-4">
+            <img class="w-100 opacity-9" src="{% static 'img/logos/medium-logos/logo-spotify.svg' %}" alt="logo">
+          </div>
+          <div class="col-lg-2 col-md-4 col-6 mb-4">
+            <img class="w-100 opacity-9" src="{% static 'img/logos/medium-logos/logo-vodafone.svg' %}" alt="logo">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- -------   END PRE-FOOTER 6 - title & description and input    -------- -->
+
+    <section class="py-4">
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <div class="col-md-6 mb-md-0 mb-4">
+            <h3 class="text-dark mb-0">Come and meet us</h3>
+            <h3>500+ offices</h3>
+            <p class="mb-4">
+              Technology is applied science. Science is the study of nature. Mathematics is the language of nature. Philosophy is the root of mathematics. All tightly interrelated.
+            </p>
+            <p class="font-weight-bold"><span class="me-2">-</span> Showcase and embed your work with</p>
+            <p class="font-weight-bold"><span class="me-2">-</span> Publish across social channels in a click</p>
+            <p class="font-weight-bold"><span class="me-2">-</span> Sell your videos worldwide</p>
+            <p class="font-weight-bold mb-5"><span class="me-2">-</span> Make more profit</p>
+            <a href="javascript:;" class="text-info icon-move-right">Learn More
+              <i class="fas fa-arrow-right text-sm ps-1"></i>
+            </a>
+          </div>
+          <div class="col-md-6">
+            <div class="card p-0 border-radius-lg">
+              <div class="blur-shadow-image">
+                <img src="{% static 'img/examples/card-project5.jpg' %}" alt="img-blur-shadow" class="img-fluid border-radius-lg" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- START Teams w/ 4 cards in a row w/ image & name & function -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 mx-auto text-center">
+            <h6 class="text-gradient text-info text-uppercase">The Executive Team</h6>
+            <h2>Building the future</h2>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-lg-3 col-12 col-md-6 mb-lg-0 mb-5">
+            <div class="card shadow-lg">
+              <div class="card-header mt-n4 mx-3 p-0 bg-transparent position-relative z-index-2">
+                <a class="d-block blur-shadow-image">
+                  <img src="https://images.unsplash.com/photo-1536321115970-5dfa13356211?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg" loading="lazy">
+                </a>
+              </div>
+              <div class="card-body text-center bg-white border-radius-lg p-3 pt-0">
+                <h5 class="mt-3 mb-1 d-md-block d-none">Miriam Lendra</h5>
+                <p class="mb-1 d-md-none d-block text-sm font-weight-bold text-dark mt-3">Miriam Lendra</p>
+                <p class="mb-0 text-xs font-weight-bolder text-info text-gradient text-uppercase">Desktop Publisher</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-12 col-md-6 mb-lg-0 mb-5">
+            <div class="card shadow-lg">
+              <div class="card-header mt-n4 mx-3 p-0 bg-transparent position-relative z-index-2">
+                <a class="d-block blur-shadow-image">
+                  <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg" loading="lazy">
+                </a>
+              </div>
+              <div class="card-body text-center bg-white border-radius-lg p-3 pt-0">
+                <h5 class="mt-3 mb-1 d-md-block d-none">Natalie Paisley</h5>
+                <p class="mb-1 d-md-none d-block text-sm font-weight-bold text-dark mt-3">Natalie Paisley</p>
+                <p class="mb-0 text-xs font-weight-bolder text-info text-gradient text-uppercase">Credit Analyst</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-12 col-md-6 mb-lg-0 mb-5">
+            <div class="card shadow-lg">
+              <div class="card-header mt-n4 mx-3 p-0 bg-transparent position-relative z-index-2">
+                <a class="d-block blur-shadow-image">
+                  <img src="https://images.unsplash.com/photo-1546215364-12f3fff5d578?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=934&q=80" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg" loading="lazy">
+                </a>
+              </div>
+              <div class="card-body text-center bg-white border-radius-lg p-3 pt-0">
+                <h5 class="mt-3 mb-1 d-md-block d-none">Mark Audrey</h5>
+                <p class="mb-1 d-md-none d-block text-sm font-weight-bold text-dark mt-3">Bella Audrey</p>
+                <p class="mb-0 text-xs font-weight-bolder text-info text-gradient text-uppercase">Economist</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-12 col-md-6 mb-lg-0 mb-5">
+            <div class="card shadow-lg">
+              <div class="card-header mt-n4 mx-3 p-0 bg-transparent position-relative z-index-2">
+                <a class="d-block blur-shadow-image">
+                  <img src="https://images.unsplash.com/photo-1519058082700-08a0b56da9b4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg" loading="lazy">
+                </a>
+              </div>
+              <div class="card-body text-center bg-white border-radius-lg p-3 pt-0">
+                <h5 class="mt-3 mb-1 d-md-block d-none">Wang Skylar</h5>
+                <p class="mb-1 d-md-none d-block text-sm font-weight-bold text-dark mt-3">Mila Skylar</p>
+                <p class="mb-0 text-xs font-weight-bolder text-info text-gradient text-uppercase">Aviation Inspector</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row pt-7 pb-6">
+          <div class="col-lg-6">
+            <h2>Get your own app</h2>
+            <p>The Arctic Ocean freezes every winter and much of the sea-ice then thaws every summer, and that process will continue whatever.</p>
+          </div>
+          <div class="col-lg-6 text-end d-flex flex-column justify-content-center">
+            <button type="button" class="btn bg-gradient-info mb-0 ms-lg-auto me-lg-0 me-auto mt-lg-0 mt-2">Join Team</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END Teams w/ 4 cards w/ image on left & description/social link on right -->
+  </div>
+
+  {% include 'includes/footer-6.html' %}
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE -->
+{% block javascripts %}
+<!-- Add any custom JavaScript here -->
+{% endblock %}

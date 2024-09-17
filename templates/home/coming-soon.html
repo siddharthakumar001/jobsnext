@@ -1,0 +1,44 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Coming Soon {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock %}
+
+{% block body_class %}{% endblock %}
+
+{% block content %} 
+
+  {% include 'includes/navigation.html' %}
+  
+  <section>
+    <div class="container vh-100 d-flex align-items-center">
+      <div class="row">
+        <div class="col-lg-4 col-md-8 my-auto">
+          <h2>Material Kit</h2>
+          <p>The time is now for it be okay to be great. Subscribe now and get notified when it's launched!</p>
+          <div class="row">
+            <div class="col-sm-8">
+              <div class="input-group input-group-outline">
+                <label class="form-label">Email Here...</label>
+                <input type="text" class="form-control mb-sm-0 mb-2">
+              </div>
+            </div>
+            <div class="col-sm-4 pl-0">
+              <button type="button" class="btn bg-gradient-dark mb-0 position-relative z-index-2">Subscribe</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8 my-auto">
+          <img class="w-100 fadeIn2 fadeInBottom" src="{{ config.ASSETS_ROOT }}/img/macbook-2.png" alt="mac-2" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% include 'includes/footer.html' %}
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock %}

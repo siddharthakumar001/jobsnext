@@ -1,0 +1,256 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Blog Author {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}
+  <link href="//cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+  <link href="//cdn.quilljs.com/1.3.6/quill.bubble.css" rel="stylesheet">
+{% endblock %}
+
+{% block body_class %} blog-author {% endblock %}
+
+{% block content %}
+
+  {% include 'includes/navigation-transparent.html' %}
+
+  <!-- -------- START HEADER 4 w/ search book a ticket form ------- -->
+  <header>
+    <div class="page-header min-height-400" style="background-image: url('{% static 'img/city-profile.jpg' %}');" loading="lazy">
+      <span class="mask bg-gradient-dark opacity-8"></span>
+    </div>
+  </header>
+  <!-- -------- END HEADER 4 w/ search book a ticket form ------- -->
+
+  <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6 mb-4">
+    <!-- START Testimonials w/ user image & text & info -->
+    <section class="py-sm-7 py-5 position-relative">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 mx-auto">
+            <div class="mt-n8 mt-md-n9 text-center">
+              <img class="avatar avatar-xxl shadow-xl position-relative z-index-2" src="{{ context.image }}" alt="profile-image" loading="lazy">
+            </div>
+            <div class="row py-5">
+              <div class="col-lg-7 col-md-7 z-index-2 position-relative px-md-2 px-sm-5 mx-auto">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <h3 class="mb-0">
+                      {% if request.user.email %}
+                         {{ request.user.email }}
+                      {% else %}
+                        {{ request.user.username }}
+                      {% endif %}
+                  </h3>
+                  <div class="d-flex">
+                      <div><a href="{% url 'logout' %}" class="btn btn-sm btn-outline-info text-nowrap mb-0">Logout</a></div>
+                      <button class="btn p-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                          <i class='fa fa-trash text-danger' ></i>
+                      </button>
+                  </div>
+                </div>
+                <div class="row mb-4">
+                  <div class="col-auto">
+                    Registered on {{ request.user.date_joined|date:"M. d, Y" }}
+                  </div>
+                </div>
+                  <div id="bio" class="text-lg mb-0">
+                  <div>
+                    {% if context.bio %}
+                      {{ context.bio|safe }}
+                    {% endif %}
+                    </div>
+                  <span id="edit-btn" class="btn btn-outline p-0 pe-2 text-info icon-move-right">
+                    Edit BIO
+                    <i class="fas fa-edit text-sm ms-1"></i>
+                  </span>
+                  </div>
+                  <div class="row quill-container d-none">
+                    <div id="toolbar-container">
+                      <span class="ql-formats">
+                        <select class="ql-size"></select>
+                      </span>
+                      <span class="ql-formats">
+                        <button class="ql-bold"></button>
+                        <button class="ql-italic"></button>
+                        <button class="ql-underline"></button>
+                        <button class="ql-strike"></button>
+                      </span>
+                      <span class="ql-formats">
+                        <button class="ql-list" value="ordered"></button>
+                        <button class="ql-list" value="bullet"></button>
+                      </span>
+                      <span class="ql-formats">
+                        <button class="ql-clean"></button>
+                      </span>
+                    </div>
+                    <div id="editor-container">
+                      {% if context.bio %}
+                        {{ context.bio|safe }}
+                      {% endif %}
+                    </div>
+                      <form id="edit-bio">
+                        <input type="submit" class="btn btn-dark mt-3" value="Save">
+                      </form>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END Testimonials w/ user image & text & info -->
+  </div>
+
+  <section class="py-lg-5">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="card box-shadow-xl overflow-hidden mb-5">
+
+            <div class="row">
+              <div class="col-lg-5 position-relative bg-cover px-0" style="background-image: url('{% static 'img/examples/blog2.jpg' %}')" loading="lazy">
+                <div class="z-index-2 text-center d-flex h-100 w-100 d-flex m-auto justify-content-center">
+                  <div class="mask bg-gradient-dark opacity-8"></div>
+                  <div class="p-5 ps-sm-8 position-relative text-start my-auto z-index-2">
+                    <h3 class="text-white">Contact Information</h3>
+                    <p class="text-white opacity-8 mb-4">Fill up the form and our Team will get back to you within 24 hours.</p>
+                        {% if SITE_OWNER_PHONE %}
+                          <div class="d-flex p-2 text-white">
+                            <div>
+                              <i class="fas fa-phone text-sm"></i>
+                            </div>
+                            <div class="ps-3">
+                              <span class="text-sm opacity-8">{{ SITE_OWNER_PHONE }}</span>
+                            </div>
+                          </div>
+                        {% endif %}
+                        {% if SITE_OWNER_MAIL %}
+                          <div class="d-flex p-2 text-white">
+                            <div>
+                              <i class="fas fa-envelope text-sm"></i>
+                            </div>
+                            <div class="ps-3">
+                              <span class="text-sm opacity-8">{{ SITE_OWNER_MAIL }}</span>
+                            </div>
+                          </div>
+                        {% endif %}
+                        {% if SITE_OWNER_ADDRESS %}
+                          <div class="d-flex p-2 text-white">
+                            <div>
+                              <i class="fas fa-map-marker-alt text-sm"></i>
+                            </div>
+                            <div class="ps-3">
+                              <span class="text-sm opacity-8">{{ SITE_OWNER_ADDRESS }}</span>
+                            </div>
+                          </div>
+                        {% endif %}
+                      <div class="mt-4">
+                        {% if SITE_OWNER_FBK %}
+                            <a target="_blank" href="{{ SITE_OWNER_FBK }}">
+                              <button type="submit" class="btn btn-icon-only btn-link text-white btn-lg mb-0">
+                                <i class="fab fa-facebook"></i>
+                              </button>
+                            </a>
+                        {% endif %}
+                        {% if SITE_OWNER_TWITTER %}
+                            <a target="_blank" href="{{ SITE_OWNER_TWITTER }}">
+                              <button type="button" class="btn btn-icon-only btn-link text-white btn-lg mb-0">
+                                <i class="fab fa-twitter"></i>
+                              </button>
+                            </a>
+                        {% endif %}
+                        {% if SITE_OWNER_INSTAGRAM %}
+                            <a target="_blank" href="{{ SITE_OWNER_INSTAGRAM }}">
+                              <button type="button" class="btn btn-icon-only btn-link text-white btn-lg mb-0">
+                                <i class="fab fa-instagram"></i>
+                              </button>
+                            </a>
+                        {% endif %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-7">
+                <form class="p-3" id="contact-form" method="post">
+        
+                  <input value="contact_us" name="action" hidden >
+                  <div class="card-header px-4 py-sm-5 py-3">
+                    <h2>Say Hi!</h2>
+                    <p class="lead">
+                      Contact us using this form.
+                    </p>
+
+                    {% if success %}
+                    <p class="mb-0 text-center text-success">
+                      {{ msg|safe }}
+                    </p>
+                    {% endif %}
+
+                    <p id="message" class="fw-light fs-5 "></p>
+                  </div>
+                  <div class="card-body pt-1">
+                    <div class="row">
+                      <div class="col-md-12 pe-2 mb-3">
+                        <div class="input-group input-group-static mb-4">
+                          <label>I'm looking for</label>
+                          <input type="text" class="form-control" placeholder="What you love" name="subject" required>
+                        </div>
+                      </div>
+                      <div class="col-md-12 pe-2 mb-3">
+                        <div class="input-group input-group-static mb-4">
+                          <label>Your message</label>
+                          <textarea name="message" class="form-control" id="message" rows="6" placeholder="I want to say that..." required></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6 text-end ms-auto">
+                        <button id="submit-btn" type="submit" class="btn bg-gradient-info mb-0">Send Message</button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  
+  </section>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">Delete Account</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+      Are you sure?
+      <p id="alert" class="text-danger mt-4 mb-0 fw-bold"></p>
+    </div>
+    <div class="modal-footer justify-content-end">
+      <button type="button" class="btn bg-gradient-dark mb-0" data-bs-dismiss="modal">Close</button>
+        
+        <form id="delete-account">
+            <input type="submit" class="btn bg-gradient-danger mb-0" value="Confirm">
+        </form>
+        
+    </div>
+  </div>
+</div>
+</div>
+
+  {% include 'includes/footer-5.html' %}
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+
+{% block javascripts %}
+    <!-- Quill -->
+    <script src="//cdn.quilljs.com/1.3.6/quill.js"></script>
+    <script src="//cdn.quilljs.com/1.3.6/quill.min.js"></script>
+    <script src="{% static 'assets/js/user-profile.js' %}"></script>
+{% endblock %}

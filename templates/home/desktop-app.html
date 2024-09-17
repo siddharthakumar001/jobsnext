@@ -1,0 +1,384 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Desktop App {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock %}
+
+{% block body_class %} desktop-app {% endblock %}
+
+{% block content %}
+
+  {% include 'includes/navigation-transparent.html' %}
+
+  <!-- -------- START HEADER 12 w/ mobile ------- -->
+  <header>
+    <div class="page-header min-vh-50 bg-gradient-dark">
+    </div>
+    <div class="bg-gradient-warning position-relative mx-xxl-8 mx-xl-4 mx-lg-3 mx-3 py-7 z-index-2 border-radius-xl mt-n12 overflow-hidden">
+      <img src="{{ config.ASSETS_ROOT }}/img/shapes/pattern-lines.svg" alt="pattern-lines" class="position-absolute opacity-6 start-0 top-0 w-100" loading="lazy">
+      <div class="container position-relative">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-lg-5 col-md-7 text-start py-sm-5 me-auto position-relative">
+            <div class="position-relative">
+              <h2 class="text-white mt-sm-0">Start building your awesome application</h2>
+              <p class="lead text-white mb-5">
+                Elegance is the end result of hard work, not the starting point.
+                Strive to make your work so invisible that the reader thinks they
+                could have written what you published.
+                Trusted by 5.000+ clients from all around the world.</p>
+              <button type="button" class="btn bg-gradient-dark">Start now</button>
+              <button type="button" class="btn btn-link text-white">Read more</button>
+            </div>
+          </div>
+          <div class="col-lg-7 position-absolute start-50 end-0 me-n12 w-75">
+            <img class="w-100 d-md-block d-none" src="{{ config.ASSETS_ROOT }}/img/macbook-2.png" alt="macbook" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- -------- END HEADER 12 w/ mobile ------- -->
+
+  <!-- -------- START Features w/ 4 infos - just colored icons -------- -->
+  <section class="py-4 mt-6">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-lg-3 col-md-6 mb-lg-0 mb-4">
+          <div class="info">
+            <i class="material-icons text-gradient text-warning text-5xl">grid_view</i>
+            <h5 class="mt-3">Components</h5>
+            <p>We get insulted by others, lose trust for those We get back.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-lg-0 mb-4">
+          <div class="info">
+            <i class="material-icons text-gradient text-warning text-5xl">textsms</i>
+            <h5 class="mt-3">Mix & Match</h5>
+            <p>We get insulted by others, lose trust for those We get back.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-lg-0 mb-4">
+          <div class="info">
+            <i class="material-icons text-gradient text-warning text-5xl">palette</i>
+            <h5 class="mt-2">Design</h5>
+            <p>We get insulted by others, lose trust for those We get back.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-lg-0 mb-4">
+          <div class="info">
+            <i class="material-icons text-gradient text-warning text-5xl">card_giftcard</i>
+            <h5 class="mt-2">Payment</h5>
+            <p>We get insulted by others, lose trust for those We get back.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- -------- END Features w/ 4 infos - just colored icons -------- -->
+
+  <!-- -------- START Features w/ 6 cols w/ company logos & title & text -------- -->
+  <section class="py-lg-7 py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h2>Get your own app</h2>
+          <p>The Arctic Ocean freezes every winter and much of the sea-ice then thaws every summer, and that process will continue whatever.</p>
+        </div>
+        <div class="col-lg-6 text-end d-flex flex-column justify-content-center">
+          <button type="button" class="btn bg-gradient-warning mb-0 ms-lg-auto me-lg-0 me-auto mt-lg-0 mt-2">Contact Us</button>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-sm-6 col-lg-4 mt-lg-0 mt-4">
+          <img class="width-48-px mb-3" src="{{ config.ASSETS_ROOT }}/img/logos/small-logos/logo-atlassian.svg" alt="atlassian">
+          <h5>Payment vendor</h5>
+          <p class="text-sm">Check out our proven methods, guides, and exercises that help make work better, and people happier.</p>
+        </div>
+        <div class="col-sm-6 col-lg-4 mt-lg-0 mt-4">
+          <img class="width-48-px mb-3" src="{{ config.ASSETS_ROOT }}/img/logos/small-logos/logo-asana.svg" alt="asana">
+          <h5>Organize your team</h5>
+          <p class="text-sm">Check out our proven methods, guides, and exercises that help make work better, and people happier.</p>
+        </div>
+        <div class="col-sm-6 col-lg-4 mt-lg-0 mt-4">
+          <img class="width-48-px mb-3" src="{{ config.ASSETS_ROOT }}/img/logos/small-logos/logo-shopify.svg" alt="shopify">
+          <h5>E-commerce</h5>
+          <p class="text-sm">Check out our proven methods, guides, and exercises that help make work better, and people happier.</p>
+        </div>
+        <div class="col-sm-6 col-lg-4 mt-lg-5 mt-4">
+          <img class="width-48-px mb-3" src="{{ config.ASSETS_ROOT }}/img/logos/small-logos/logo-invision.svg" alt="invision">
+          <h5>Digital Product Design</h5>
+          <p class="text-sm">Check out our proven methods, guides, and exercises that help make work better, and people happier.</p>
+        </div>
+        <div class="col-sm-6 col-lg-4 mt-lg-5 mt-4">
+          <img class="width-48-px mb-3" src="{{ config.ASSETS_ROOT }}/img/logos/small-logos/logo-slack.svg" alt="slack">
+          <h5>Better Communication</h5>
+          <p class="text-sm">Check out our proven methods, guides, and exercises that help make work better, and people happier.</p>
+        </div>
+        <div class="col-sm-6 col-lg-4 mt-lg-5 mt-4">
+          <img class="width-48-px mb-3" src="{{ config.ASSETS_ROOT }}/img/logos/small-logos/logo-webdev.svg" alt="webdev">
+          <h5>Logo design</h5>
+          <p class="text-sm">Check out our proven methods, guides, and exercises that help make work better, and people happier.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- -------- END Features w/ 6 cols w/ company logos & title & text -------- -->
+
+  <section class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 mx-auto text-center">
+          <h2 class="text-gradient text-warning mb-0">What random people</h2>
+          <h2 class="mb-3">Think about us</h2>
+          <p>That’s the main thing people are controlled by! Thoughts- their perception of themselves! </p>
+        </div>
+      </div>
+      <div class="row mt-6">
+        <div class="col-lg-4 col-md-8">
+          <div class="card card-plain">
+            <div class="card-body">
+              <div class="rating float-none">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+              <p class="mt-3">"If you have the opportunity to play this game of life you need to appreciate every moment."</p>
+              <div class="author mt-4">
+                <img src="{{ config.ASSETS_ROOT }}/img/team-3.jpg" alt="..." class="avatar shadow">
+                <div class="name ps-2">
+                  <span>Mathew Glock</span>
+                  <div class="stats">
+                    <small><i class="far fa-clock"></i> 5 min read</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-8 ms-md-auto">
+          <div class="card bg-gradient-warning">
+            <div class="card-body">
+              <div class="rating float-none">
+                <i class="fas fa-star text-white"></i>
+                <i class="fas fa-star text-white"></i>
+                <i class="fas fa-star text-white"></i>
+                <i class="far fa-star text-white"></i>
+                <i class="far fa-star text-white"></i>
+              </div>
+              <p class="mt-3 text-white">"If you have the opportunity to play this game of life you need to appreciate every moment."</p>
+              <div class="author align-items-center mt-4">
+                <img src="{{ config.ASSETS_ROOT }}/img/marie.jpg" alt="..." class="avatar shadow">
+                <div class="name ps-2">
+                  <span class="text-white">Mathew Glock</span>
+                  <div class="stats">
+                    <small class="text-white">Posted on 28 February</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-8">
+          <div class="card card-plain">
+            <div class="card-body">
+              <div class="rating float-none">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="mt-3">"If you have the opportunity to play this game of life you need to appreciate every moment."</p>
+              <div class="author mt-4">
+                <img src="{{ config.ASSETS_ROOT }}/img/team-2.jpg" alt="..." class="avatar shadow">
+                <div class="name ps-2">
+                  <span>Mathew Glock</span>
+                  <div class="stats">
+                    <small><i class="far fa-clock"></i> 5 min read</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="my-5">
+      <div class="row">
+        <div class="col-lg-2 col-md-4 col-6">
+          <img class="w-100 opacity-6" src="{{ config.ASSETS_ROOT }}/img/logos/gray-logos/logo-apple.svg" alt="Logo">
+        </div>
+        <div class="col-lg-2 col-md-4 col-6">
+          <img class="w-100 opacity-6" src="{{ config.ASSETS_ROOT }}/img/logos/gray-logos/logo-facebook.svg" alt="Logo">
+        </div>
+        <div class="col-lg-2 col-md-4 col-6">
+          <img class="w-100 opacity-6" src="{{ config.ASSETS_ROOT }}/img/logos/gray-logos/logo-behance.svg" alt="Logo">
+        </div>
+        <div class="col-lg-2 col-md-4 col-6">
+          <img class="w-100 opacity-6" src="{{ config.ASSETS_ROOT }}/img/logos/gray-logos/logo-spotify.svg" alt="Logo">
+        </div>
+        <div class="col-lg-2 col-md-4 col-6">
+          <img class="w-100 opacity-6" src="{{ config.ASSETS_ROOT }}/img/logos/gray-logos/logo-coinbase.svg" alt="Logo">
+        </div>
+        <div class="col-lg-2 col-md-4 col-6">
+          <img class="w-100 opacity-6" src="{{ config.ASSETS_ROOT }}/img/logos/gray-logos/logo-pinterest.svg" alt="Logo">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-md-7">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 mx-auto text-center">
+          <h3>Pick the best plan for you</h3>
+          <p>You have Free Unlimited Updates and Premium Support on each package.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 col-md-10 col-12 mx-auto text-center">
+          <div class="nav-wrapper mt-5">
+            <ul class="nav nav-pills nav-fill flex-row p-1" id="tabs-pricing" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link mb-0 active" id="tabs-iconpricing-tab-1" data-bs-toggle="tab" href="#tabs-pricing-tab-1" role="tab" aria-selected="true">
+                  Annual
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mb-0" id="tabs-iconpricing-tab-2" data-bs-toggle="tab" href="#tabs-pricing-tab-2" role="tab" aria-selected="false">
+                  Monthly
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-lg-3 col-sm-6 mb-lg-0 mb-4">
+          <div class="card h-100">
+            <div class="card-header text-sm-start text-center pt-4 pb-3 px-4">
+              <h5 class="mb-1">Starter</h5>
+              <p class="mb-3 text-sm">Free access for 2 members</p>
+              <h3 class="font-weight-bolder mt-3">
+                $199 <small class="text-sm text-secondary font-weight-bold">/ year</small>
+              </h3>
+              <a href="javascript:;" class="btn btn-sm bg-gradient-dark w-100 border-radius-md mt-4 mb-2">Buy now</a>
+            </div>
+            <hr class="horizontal dark my-0">
+            <div class="card-body">
+              <div class="d-flex pb-3">
+                <i class="material-icons my-auto text-dark">done</i>
+                <span class="text-sm ps-3">Complete documentation</span>
+              </div>
+              <div class="d-flex pb-3">
+                <i class="material-icons my-auto text-dark">done</i>
+                <span class="text-sm ps-3">Working materials in Sketch</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 mb-lg-0 mb-4">
+          <div class="card h-100">
+            <div class="card-header text-sm-start text-center pt-4 pb-3 px-4">
+              <h5 class="mb-1">Pro</h5>
+              <p class="mb-3 text-sm">Free access for 30 members</p>
+              <h3 class="font-weight-bolder mt-3">
+                $299 <small class="text-sm text-secondary font-weight-bold">/ year</small>
+              </h3>
+              <a href="javascript:;" class="btn btn-sm bg-gradient-dark w-100 border-radius-md mt-4 mb-2">Buy now</a>
+            </div>
+            <hr class="horizontal dark my-0">
+            <div class="card-body">
+              <div class="d-flex pb-3">
+                <i class="material-icons my-auto text-dark">done</i>
+                <span class="text-sm ps-3">Complete documentation</span>
+              </div>
+              <div class="d-flex pb-3">
+                <i class="material-icons my-auto text-dark">done</i>
+                <span class="text-sm ps-3">Working materials in Sketch</span>
+              </div>
+              <div class="d-flex pb-3">
+                <i class="material-icons my-auto text-dark">done</i>
+                <span class="text-sm ps-3">2GB cloud storage</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 mb-lg-0 mb-4">
+          <div class="card bg-gradient-dark h-100">
+            <div class="card-header bg-transparent text-sm-start text-center pt-4 pb-3 px-4">
+              <h5 class="mb-1 text-white">Premium</h5>
+              <p class="mb-3 text-sm text-white">Free access for 200 members</p>
+              <h3 class="font-weight-bolder mt-3 text-white">
+                $499 <small class="text-sm text-white font-weight-bold">/ year</small>
+              </h3>
+              <a href="javascript:;" class="btn btn-sm btn-white w-100 border-radius-md mt-4 mb-2">Buy now</a>
+            </div>
+            <hr class="horizontal light my-0">
+            <div class="card-body">
+              <div class="d-flex pb-3">
+                <i class="material-icons my-auto text-white">done</i>
+                <span class="text-sm text-white ps-3">Complete documentation</span>
+              </div>
+              <div class="d-flex pb-3">
+                <i class="material-icons my-auto text-white">done</i>
+                <span class="text-sm text-white ps-3">Working materials in Sketch</span>
+              </div>
+              <div class="d-flex pb-3">
+                <i class="material-icons my-auto text-white">done</i>
+                <span class="text-sm text-white ps-3">20GB cloud storage</span>
+              </div>
+              <div class="d-flex pb-3">
+                <i class="material-icons my-auto text-white">done</i>
+                <span class="text-sm text-white ps-3">100 team members</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 mb-lg-0 mb-4">
+          <div class="card h-100">
+            <div class="card-header text-sm-start text-center pt-4 pb-3 px-4">
+              <h5 class="mb-1">Enterprise</h5>
+              <p class="mb-3 text-sm">Free access for all members</p>
+              <h3 class="font-weight-bolder mt-3">
+                $899 <small class="text-sm text-secondary font-weight-bold">/ year</small>
+              </h3>
+              <a href="javascript:;" class="btn btn-sm bg-gradient-dark w-100 border-radius-md mt-4 mb-2">Buy now</a>
+            </div>
+            <hr class="horizontal dark my-0">
+            <div class="card-body">
+              <div class="d-flex pb-3">
+                <i class="material-icons my-auto text-dark">done</i>
+                <span class="text-sm ps-3">Complete documentation</span>
+              </div>
+              <div class="d-flex pb-3">
+                <i class="material-icons my-auto text-dark">done</i>
+                <span class="text-sm ps-3">Working materials in Sketch</span>
+              </div>
+              <div class="d-flex pb-3">
+                <i class="material-icons my-auto text-dark">done</i>
+                <span class="text-sm ps-3">100GB cloud storage</span>
+              </div>
+              <div class="d-flex pb-3">
+                <i class="material-icons my-auto text-dark">done</i>
+                <span class="text-sm ps-3">500 team members</span>
+              </div>
+              <div class="d-flex pb-3">
+                <i class="material-icons my-auto text-dark">done</i>
+                <span class="text-sm ps-3">Premium support</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% include 'includes/footer-1.html' %}
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock %}

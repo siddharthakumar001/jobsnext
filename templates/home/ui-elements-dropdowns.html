@@ -1,0 +1,250 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} UI Dropdowns {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock %}
+
+{% block body_class %} dropdowns-sections {% endblock %}
+
+{% block content %}
+
+  {% include 'includes/navigation-light.html' %}
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-lg-12 mx-auto">
+        <div class="mb-4 w-100 w-md-50 w-lg-25">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="">Elements</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Dropdowns</li>
+            </ol>
+          </nav>
+          <h3>Dropdowns</h3>
+        </div>
+        <div class="position-relative border-radius-xl overflow-hidden shadow-lg mb-7">
+          <div class="container border-bottom">
+            <div class="row justify-space-between py-2">
+              <div class="col-lg-3 me-auto">
+                <p class="lead text-dark pt-1 mb-0">Dropdown and Dropup</p>
+              </div>
+              <div class="col-lg-3">
+                <div class="nav-wrapper position-relative end-0">
+                  <ul class="nav nav-pills nav-fill flex-row p-1" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link mb-0 px-0 py-1 active" data-bs-toggle="tab" href="#preview-dropdown" role="tab" aria-selected="true">
+                        <i class="fas fa-desktop text-sm me-2"></i> Preview
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" href="#code-dropdown" role="tab" aria-selected="false">
+                        <i class="fas fa-code text-sm me-2"></i> Code
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-content tab-space">
+            <div class="tab-pane active" id="preview-dropdown">
+              <iframe class="w-100 height-300" srcdoc='<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+        <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+        <!-- Material Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+        <link id="pagestyle" href="https://demos.creative-tim.com/material-kit-pro/assets/css/material-kit-pro.min.css?v=3.0.0" rel="stylesheet" />
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Start dropdowns & dropups -->
+<div class="container py-7">
+  <div class="row">
+      <div class="row">
+        <div class="col-lg-4 ms-lg-auto col-md-6 col-sm-3 d-flex justify-content-center">
+          <div class="dropdown">
+            <button class="btn bg-gradient-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown button
+            </button>
+            <ul class="dropdown-menu px-2 py-3" aria-labelledby="dropdownMenuButton">
+              <li><a class="dropdown-item border-radius-md" href="javascript:;">Action</a></li>
+              <li><a class="dropdown-item border-radius-md" href="javascript:;">Another action</a></li>
+              <li><a class="dropdown-item border-radius-md" href="javascript:;">Something else here</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 me-lg-auto col-md-6 col-sm-3 d-flex justify-content-center">
+          <div class="btn-group dropup mt-7">
+            <button type="button" class="btn bg-gradient-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropup
+            </button>
+            <ul class="dropdown-menu px-2 py-3" aria-labelledby="dropdownMenuButton">
+              <li><a class="dropdown-item border-radius-md" href="javascript:;">Action</a></li>
+              <li><a class="dropdown-item border-radius-md" href="javascript:;">Another action</a></li>
+              <li><a class="dropdown-item border-radius-md" href="javascript:;">Something else here</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+<!--   end dropdowns & dropups -->
+
+        <script src="{{ config.ASSETS_ROOT }}/js/core/popper.min.js" type="text/javascript"></script>
+        <script src="{{ config.ASSETS_ROOT }}/js/core/bootstrap.min.js" type="text/javascript"></script>
+        <script src="https://demos.creative-tim.com/material-kit-pro/assets/js/material-kit-pro.min.js?v=3.0.0" type="text/javascript"></script>
+        '></iframe>
+            </div>
+            <div class="tab-pane" id="code-dropdown">
+              <div class="position-relative p-4 pb-2">
+                <a class="btn btn-sm bg-gradient-dark position-absolute end-4 mt-3" onclick="copyCode(this);" href="javascript:;"><i class="fas fa-copy text-sm me-1"></i> Copy</a>
+                <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Start dropdowns &amp; dropups --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container py-7"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-lg-4 ms-lg-auto col-md-6 col-sm-3 d-flex justify-content-center"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn bg-gradient-primary dropdown-toggle"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuButton"</span> <span class="na">data-bs-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+              Dropdown button
+            <span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown-menu px-2 py-3"</span> <span class="na">aria-labelledby=</span><span class="s">"dropdownMenuButton"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item border-radius-md"</span> <span class="na">href=</span><span class="s">"javascript:;"</span><span class="nt">&gt;</span>Action<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item border-radius-md"</span> <span class="na">href=</span><span class="s">"javascript:;"</span><span class="nt">&gt;</span>Another action<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item border-radius-md"</span> <span class="na">href=</span><span class="s">"javascript:;"</span><span class="nt">&gt;</span>Something else here<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-lg-4 me-lg-auto col-md-6 col-sm-3 d-flex justify-content-center"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group dropup mt-7"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn bg-gradient-primary dropdown-toggle"</span> <span class="na">data-bs-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+              Dropup
+            <span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown-menu px-2 py-3"</span> <span class="na">aria-labelledby=</span><span class="s">"dropdownMenuButton"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item border-radius-md"</span> <span class="na">href=</span><span class="s">"javascript:;"</span><span class="nt">&gt;</span>Action<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item border-radius-md"</span> <span class="na">href=</span><span class="s">"javascript:;"</span><span class="nt">&gt;</span>Another action<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item border-radius-md"</span> <span class="na">href=</span><span class="s">"javascript:;"</span><span class="nt">&gt;</span>Something else here<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="c">&lt;!--   end dropdowns &amp; dropups --&gt;</span></code></pre>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="position-relative border-radius-xl overflow-hidden shadow-lg mb-7">
+          <div class="container border-bottom">
+            <div class="row justify-space-between py-2">
+              <div class="col-lg-3 me-auto">
+                <p class="lead text-dark pt-1 mb-0">Selectpicker</p>
+              </div>
+              <div class="col-lg-3">
+                <div class="nav-wrapper position-relative end-0">
+                  <ul class="nav nav-pills nav-fill flex-row p-1" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link mb-0 px-0 py-1 active" data-bs-toggle="tab" href="#preview-select" role="tab" aria-selected="true">
+                        <i class="fas fa-desktop text-sm me-2"></i> Preview
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" href="#code-select" role="tab" aria-selected="false">
+                        <i class="fas fa-code text-sm me-2"></i> Code
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-content tab-space">
+            <div class="tab-pane active" id="preview-select">
+              <iframe class="w-100 height-400" srcdoc='<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+        <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+        <!-- Material Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+        <link id="pagestyle" href="https://demos.creative-tim.com/material-kit-pro/assets/css/material-kit-pro.min.css?v=3.0.0" rel="stylesheet" />
+        <div class="container py-7">
+  <div class="row">
+    <div class="col-3 mx-auto">
+      <select class="form-control" name="choice-button" id="choice-button" placeholder="Language">
+        <option value="Choice 1" selected>Brazil</option>
+        <option value="Choice 2">Bucharest</option>
+        <option value="Choice 3">London</option>
+        <option value="Choice 4">Washington</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+        <script src="{{ config.ASSETS_ROOT }}/js/core/popper.min.js" type="text/javascript"></script>
+        <script src="{{ config.ASSETS_ROOT }}/js/core/bootstrap.min.js" type="text/javascript"></script>
+        <script src="{{ config.ASSETS_ROOT }}/js/plugins/choices.min.js"></script>
+        <script src="https://demos.creative-tim.com/material-kit-pro/assets/js/material-kit-pro.min.js?v=3.0.0" type="text/javascript"></script>
+        <script>
+        if (document.getElementById("choice-button")) {
+          var element = document.getElementById("choice-button");
+          const example = new Choices(element, {
+            searchEnabled: false
+          });
+        }
+        </script>
+        '></iframe>
+            </div>
+            <div class="tab-pane" id="code-select">
+              <div class="position-relative p-4 pb-2">
+                <a class="btn btn-sm bg-gradient-dark position-absolute end-4 mt-3" onclick="copyCode(this);" href="javascript:;"><i class="fas fa-copy text-sm me-1"></i> Copy</a>
+                <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container py-7"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-3 mx-auto"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">name=</span><span class="s">"choice-button"</span> <span class="na">id=</span><span class="s">"choice-button"</span> <span class="na">placeholder=</span><span class="s">"Language"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Choice 1"</span> <span class="na">selected</span><span class="nt">&gt;</span>Brazil<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Choice 2"</span><span class="nt">&gt;</span>Bucharest<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Choice 3"</span><span class="nt">&gt;</span>London<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Choice 4"</span><span class="nt">&gt;</span>Washington<span class="nt">&lt;/option&gt;</span>
+      <span class="nt">&lt;/select&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+
+<span class="c">&lt;!-- mandatory scripts --&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"{{ config.ASSETS_ROOT }}/js/plugins/choices.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script&gt;</span>
+<span class="k">if</span> <span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">choices-button</span><span class="dl">"</span><span class="p">))</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">choices-button</span><span class="dl">"</span><span class="p">);</span>
+  <span class="kd">const</span> <span class="nx">example</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Choices</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="p">{});</span>
+<span class="p">}</span>
+<span class="nt">&lt;/script&gt;</span></code></pre>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  {% include 'includes/footer-3.html' %}
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock %}

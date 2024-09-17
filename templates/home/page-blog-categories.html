@@ -1,0 +1,220 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Blog Categories {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock %}
+
+{% block body_class %} blog-categories bg-gray-200 {% endblock %}
+
+{% block content %}
+
+  {% include 'includes/navigation-transparent.html' %}
+
+  <!-- -------- START HEADER 4 w/ search book a ticket form ------- -->
+  <header>
+    <div class="page-header min-vh-50" style="background-image: url('https://images.unsplash.com/photo-1491156855053-9cdff72c7f85?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2200&q=80')" loading="lazy">
+      <span class="mask bg-gradient-dark"></span>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-white text-center">
+            <h2 class="text-white">Search over our Blog Posts</h2>
+            <p class="lead">A place for entrepreneurs to share and discover new Stories</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- -------- END HEADER 4 w/ search book a ticket form ------- -->
+
+  <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6 mb-4">
+    <div class="container">
+      <div class="row mb-5 border-radius-xl mt-5 pb-4 w-100 w-md-75 p-0 p-md-3 mx-auto">
+        <div class="col-lg-6 d-flex align-items-center ms-auto">
+          <div class="input-group input-group-outline">
+            <label class="form-label">Type here</label>
+            <input class="form-control" type="text">
+          </div>
+        </div>
+        <div class="col-lg-3 d-flex align-items-center me-auto">
+          <button type="button" class="btn bg-gradient-dark w-100 mb-0 mt-3 mt-lg-0">Search</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 justify-content-center d-flex flex-column">
+                <div class="card">
+                  <div class="d-block blur-shadow-image">
+                    <img src="https://images.unsplash.com/photo-1574766699303-ac3a5dffb74e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80" alt="img-blur-shadow-blog-2" class="img-fluid border-radius-lg" loading="lazy">
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 justify-content-center d-flex flex-column pl-lg-5 pt-lg-0 pt-3">
+                <h6 class="category text-warning mt-3">Coworking</h6>
+                <h3 class="card-title">
+                  <a href="javascript:;" class="text-dark">Warner Music Group buys concert discovery service Songkick</a>
+                </h3>
+                <p class="card-description">
+                  Warner Music Group announced today it’s acquiring the selected assets of the music platform Songkick, including its app for finding concerts and the company’s trademark. Songkick has been involved in a lawsuit against the major… <a href="javascript:;" class="text-darker icon-move-right text-sm">Read More
+                    <i class="fas fa-arrow-right text-xs ms-1"></i>
+                  </a>
+                </p>
+                <p class="author">
+                  by <a href="javascript:;" class="ms-1"><span class="font-weight-bold text-warning"> Sarah Perez</span></a>, 2 days ago
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row mt-5">
+              <div class="col-lg-4 mb-lg-0 mb-4">
+                <!-- Start Card Blog Fullbackground - text centered -->
+                <a href="javascript:;">
+                  <div class="card card-background shadow-lg">
+                    <div class="full-background" style="background-image: url('https://images.unsplash.com/photo-1491566102020-21838225c3c8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=911&q=80')" loading="lazy"></div>
+                    <div class="card-body pt-12">
+                      <h4 class="text-white">Ability to Focus</h4>
+                      <p>Why would anyone pick blue over pink? Pink is obviously a better color. Everyone’s born confident, and everything’s taken away from you</p>
+                    </div>
+                  </div>
+                </a>
+                <!-- End Card Blog Fullbackground - text centered -->
+              </div>
+              <div class="col-lg-4 mb-lg-0 mb-4">
+                <!-- Start Card Blog Fullbackground - text centered -->
+                <a href="javascript:;">
+                  <div class="card card-background shadow-lg">
+                    <div class="full-background" style="background-image: url('https://images.unsplash.com/photo-1543781363-295b2861bb81?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=913&q=80')" loading="lazy"></div>
+                    <div class="card-body pt-12">
+                      <h4 class="text-white">Search and Discovery</h4>
+                      <p>A network alone will not lead to opportunities.
+                        It has to be combined with the content you consume (books, media) to see how this network.
+                      </p>
+                    </div>
+                  </div>
+                </a>
+                <!-- End Card Blog Fullbackground - text centered -->
+              </div>
+              <div class="col-lg-4">
+                <!-- Start Card Blog Fullbackground - text centered -->
+                <a href="javascript:;">
+                  <div class="card card-background shadow-lg">
+                    <div class="full-background" style="background-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=931&q=80')" loading="lazy"></div>
+                    <div class="card-body pt-12">
+                      <h4 class="text-white">People get Intimidated </h4>
+                      <p>If you’re living well, you will make dissatisfied people feel insignificnt. People get intimidated by anything that makes them feel small.</p>
+                    </div>
+                  </div>
+                </a>
+                <!-- End Card Blog Fullbackground - text centered -->
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row mt-5">
+              <div class="col-lg-6 justify-content-center d-flex flex-column">
+                <div class="card">
+                  <div class="d-block blur-shadow-image">
+                    <img src="https://images.unsplash.com/photo-1620103143245-9efb3e4a7553?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="img-blur-shadow-blog-2" class="img-fluid border-radius-xl" loading="lazy">
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 justify-content-center d-flex flex-column pl-lg-5 pt-lg-0 pt-3">
+                <h6 class="category text-warning mt-3">Productivity</h6>
+                <h3 class="card-title">
+                  <a href="javascript:;" class="text-dark">Interesting factoids I bet you never knew about Creative Tim</a>
+                </h3>
+                <p class="card-description">
+                  Warner Music Group announced today it’s acquiring the selected assets of the music platform Songkick, including its app for finding concerts and the company’s trademark. Songkick has been involved in a lawsuit against the major… <a href="javascript:;" class="text-darker icon-move-right text-sm">Read More
+                    <i class="fas fa-arrow-right text-xs ms-1"></i>
+                  </a>
+                </p>
+                <p class="author">
+                  by <a href="javascript:;" class="ms-1"><span class="font-weight-bold text-warning"> Sarah Perez</span></a>, 2 days ago
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row mt-5">
+              <div class="col-lg-4 mb-lg-0 mb-4">
+                <!-- Start Card Blog Fullbackground - text centered -->
+                <a href="javascript:;">
+                  <div class="card card-background shadow-lg">
+                    <div class="full-background" style="background-image: url('https://images.unsplash.com/photo-1503924289140-72034152d86e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=958&q=80')" loading="lazy"></div>
+                    <div class="card-body pt-12">
+                      <h4 class="text-white">History of Industry</h4>
+                      <p>Knowing the history better than anybody else is a huge career advantage, which is wild because even though it’s so simple, few people read up.</p>
+                    </div>
+                  </div>
+                </a>
+                <!-- End Card Blog Fullbackground - text centered -->
+              </div>
+              <div class="col-lg-4 mb-lg-0 mb-4">
+                <!-- Start Card Blog Fullbackground - text centered -->
+                <a href="javascript:;">
+                  <div class="card card-background shadow-lg">
+                    <div class="full-background" style="background-image: url('https://images.unsplash.com/photo-1491770042090-0810a7e20f46?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=975&q=80')" loading="lazy"></div>
+                    <div class="card-body pt-12">
+                      <h4 class="text-white">Digital Representation</h4>
+                      <p>Every protocol has a token, to where every application has a token, to where every valuable representation of an object or person has token.</p>
+                    </div>
+                  </div>
+                </a>
+                <!-- End Card Blog Fullbackground - text centered -->
+              </div>
+              <div class="col-lg-4">
+                <!-- Start Card Blog Fullbackground - text centered -->
+                <a href="javascript:;">
+                  <div class="card card-background shadow-lg">
+                    <div class="full-background" style="background-image: url('https://images.unsplash.com/photo-1560929585-031f74da804d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80')" loading="lazy"></div>
+                    <div class="card-body pt-12">
+                      <h4 class="text-white">Beginning of an Infinity</h4>
+                      <p>Website visitors today demand a frictionless user expericence — especially when using search. Because of the hight standards.</p>
+                    </div>
+                  </div>
+                </a>
+                <!-- End Card Blog Fullbackground - text centered -->
+              </div>
+            </div>
+          </div>
+          <ul class="pagination pagination-warning my-5 ps-4">
+            <li class="page-item">
+              <a class="page-link" href="javascript:;" aria-label="Previous">
+                <span aria-hidden="true"><i class="fa fa-angle-double-left" aria-hidden="true"></i></span>
+              </a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="javascript:;">1</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="javascript:;">2</a>
+            </li>
+            <li class="page-item active">
+              <a class="page-link" href="javascript:;">3</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="javascript:;">4</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="javascript:;">5</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="javascript:;" aria-label="Next">
+                <span aria-hidden="true"><i class="fa fa-angle-double-right" aria-hidden="true"></i></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% include 'includes/footer-5.html' %}
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock %}

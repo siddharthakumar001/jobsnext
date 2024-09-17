@@ -1,0 +1,325 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Automotive {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock %}
+
+{% block body_class %} automotive {% endblock %}
+
+{% block content %}
+
+  {% include 'includes/navigation.html' %}
+  
+  <!-- -------- START HEADER 1 w/ text and image on right ------- -->
+  <header>
+    <div class="page-header min-vh-50" style="background-image: url('https://images.unsplash.com/photo-1497377825569-02ad2f9edb81?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1966&q=80');" loading="lazy">
+      <span class="mask bg-gradient-dark"></span>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-8 d-flex justify-content-center flex-column text-center position-absolute top-0 h-100">
+            <div class="mx-auto text-start">
+              <h1 class="text-white">High Impact Protection</h1>
+              <p class="text-white">People in this world shun people for being nice. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- -------- END HEADER 1 w/ text and image on right ------- -->
+  <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6 mb-4">
+    <section class="testimonial-2 mt-5 pt-5">
+      <div class="container">
+        <div class="row mt-n5 border-radius-md pb-4 p-3 mx-sm-0 mx-1 position-relative z-index-3">
+          <div class="col-lg-3 mt-lg-n2 mt-2">
+            <label class="ms-0">Leave From</label>
+            <select class="form-control" name="choice-button" id="choice-button">
+              <option value="Choice 1" selected="">Brazil</option>
+              <option value="Choice 2">Bucharest</option>
+              <option value="Choice 3">London</option>
+              <option value="Choice 4">USA</option>
+            </select>
+          </div>
+          <div class="col-lg-3 mt-lg-n2 mt-2">
+            <label class="ms-0">To</label>
+            <select class="form-control" name="choice-remove-button" id="choice-remove-button">
+              <option value="Choice 1" selected="">Italy</option>
+              <option value="Choice 2">Spain</option>
+              <option value="Choice 3">Denmark</option>
+              <option value="Choice 4">Poland</option>
+            </select>
+          </div>
+          <div class="col-lg-3 mt-lg-n2 mt-2">
+            <label class="ms-0">Depart</label>
+            <div class="input-group input-group-static">
+              <span class="input-group-text"><i class="fas fa-calendar"></i></span>
+              <input class="form-control datepicker" placeholder="Please select date" type="text">
+            </div>
+          </div>
+          <div class="col-lg-3 d-flex align-items-center my-auto">
+            <button type="button" class="btn bg-gradient-primary w-100 mb-0 m4 mt-3">Book</button>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="gliderrr">
+            <div data-glide-el="track" class="glide__track">
+              <ul class="glide__slides">
+                <li class="glide__slide">
+                  <div class="glide__container">
+                    <div class="card">
+                      <div class="card-body text-center pb-0 position-relative">
+                        <img class="w-75 end-0 start-0 mx-auto top-0 mt-lg-n6 mt-n4 position-absolute" src="{{ config.ASSETS_ROOT }}/img/automotive/amg-gt.png" alt="amg-gt" loading="lazy">
+                        <h6 class="mt-6">AMG GT</h6>
+                        <button type="button" class="btn btn-sm btn-rounded btn-outline-dark">Book Now</button>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="glide__slide">
+                  <div class="glide__container">
+                    <div class="card">
+                      <div class="card-body text-center pb-0 position-relative">
+                        <img class="w-75 end-0 start-0 mx-auto top-0 mt-lg-n6 mt-n4 position-absolute" src="{{ config.ASSETS_ROOT }}/img/automotive/g-amg.png" alt="g-amg" loading="lazy">
+                        <h6 class="mt-6">G63 AMG</h6>
+                        <button type="button" class="btn btn-sm btn-rounded btn-outline-dark">Book Now</button>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="glide__slide">
+                  <div class="glide__container">
+                    <div class="card">
+                      <div class="card-body text-center pb-0 position-relative">
+                        <img class="w-75 end-0 start-0 mx-auto top-0 mt-lg-n6 mt-n4 position-absolute" src="{{ config.ASSETS_ROOT }}/img/automotive/s-maybach.png" alt="s-mayback" loading="lazy">
+                        <h6 class="mt-6">S Maybach</h6>
+                        <button type="button" class="btn btn-sm btn-rounded btn-outline-dark">Book Now</button>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="glide__slide">
+                  <div class="glide__container">
+                    <div class="card">
+                      <div class="card-body text-center pb-0 position-relative">
+                        <img class="w-75 end-0 start-0 mx-auto top-0 mt-lg-n6 mt-n4 position-absolute" src="{{ config.ASSETS_ROOT }}/img/automotive/glc.png" alt="glc" loading="lazy">
+                        <h6 class="mt-6">GLC</h6>
+                        <button type="button" class="btn btn-sm btn-rounded btn-outline-dark">Book Now</button>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="glide__slide">
+                  <div class="glide__container">
+                    <div class="card">
+                      <div class="card-body text-center pb-0 position-relative">
+                        <img class="w-75 end-0 start-0 mx-auto top-0 mt-n4 position-absolute" src="{{ config.ASSETS_ROOT }}/img/automotive/cls.png" alt="cls" loading="lazy">
+                        <h6 class="mt-6">CLS</h6>
+                        <button type="button" class="btn btn-sm btn-rounded btn-outline-dark">Book Now</button>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- -------- START Features w/ 4 cols w/ title & text & link -------- -->
+    <section class="py-lg-7 py-5">
+      <div class="container">
+        <div class="row justify-content-start">
+          <div class="col-lg-3 col-sm-6 mt-lg-0 mt-4">
+            <h6 class="mb-2">24/7 Support</h6>
+            <p class="mb-2 me-4 text-sm">Choose the best design system to build your next product.</p>
+            <a href="javascript:;" class="text-primary icon-move-right text-sm d-flex align-items-center">Learn More
+              <i class="material-icons font-weight-bold ms-1 text-sm">arrow_forward</i>
+            </a>
+          </div>
+          <div class="col-lg-3 col-sm-6 mt-lg-0 mt-4">
+            <h6 class="mb-2">500+ Cars</h6>
+            <p class="mb-2 me-4 text-sm">Get the latest design ideas and turn it into reality.</p>
+            <a href="javascript:;" class="text-primary icon-move-right text-sm d-flex align-items-center">Learn More
+              <i class="material-icons font-weight-bold ms-1 text-sm">arrow_forward</i>
+            </a>
+          </div>
+          <div class="col-lg-3 col-sm-6 mt-lg-0 mt-4">
+            <h6 class="mb-2">4.000+ Hours</h6>
+            <p class="mb-2 me-4 text-sm">Make your code easier to maintain using variables.</p>
+            <a href="javascript:;" class="text-primary icon-move-right text-sm d-flex align-items-center">Learn More
+              <i class="material-icons font-weight-bold ms-1 text-sm">arrow_forward</i>
+            </a>
+          </div>
+          <div class="col-lg-3 col-sm-6 mt-lg-0 mt-4">
+            <h6 class="mb-2">€100.000.000 Sells</h6>
+            <p class="mb-2 me-4 text-sm">This design system is fully supported on any device.</p>
+            <a href="javascript:;" class="text-primary icon-move-right text-sm d-flex align-items-center">Learn More
+              <i class="material-icons font-weight-bold ms-1 text-sm">arrow_forward</i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- -------- END Features w/ 4 cols w/ title & text & link -------- -->
+    <!-- START Blogs w/ 3 images & quote & text -->
+    <section class="py-5 mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 position-relative">
+            <div class="position-relative ms-md-5 me-md-n5">
+              <div class="blur-shadow-image">
+                <img class="image-left border-radius-lg img-fluid position-relative top-0 end-0 bg-cover" src="https://images.unsplash.com/photo-1620064916958-605375619af8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1493&q=80" alt="merc" loading="lazy">
+              </div>
+            </div>
+            <p class="blockquote border border-primary rounded w-50 p-3 text-sm text-primary float-md-end mt-4 me-md-n2 mx-auto">"Over the span of the satellite record, Arctic sea ice has been declining significantly, while sea ice in the Antarctichas increased very slightly"
+              <br>
+              <br>
+              <small>-NOAA</small>
+            </p>
+            <!-- Second image on the left side of the article -->
+            <div class="position-absolute bottom-0 ms-n2 me-3 start-0 end-2 d-md-block d-none">
+              <div class="blur-shadow-image">
+                <img class="image-container border-radius-lg img-fluid position-relative bg-cover" src="https://images.unsplash.com/photo-1604399419919-5e7e3ff0db76?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="steer" loading="lazy">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <!-- First image on the right side, above the article -->
+            <div class="position-relative ms-n4 mb-5 mt-8 d-md-block d-none">
+              <div class="blur-shadow-image">
+                <img class="image-right border-radius-lg img-fluid position-relative bg-cover" src="https://images.unsplash.com/photo-1432462770865-65b70566d673?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="biturbo" loading="lazy">
+              </div>
+            </div>
+            <h3 class="mb-4">So what does the new record for the lowest level of winter ice actually mean</h3>
+            <p>The Arctic Ocean freezes every winter and much of the sea-ice then thaws every summer, and that process will continue whatever happens with climate change. Even if the Arctic continues to be one of the fastest-warming regions of the world, it will always be plunged into bitterly cold polar dark every winter. And year-by-year, for all kinds of natural reasons, there’s huge variety of the state of the ice.
+            </p>
+            <p>
+              For a start, it does not automatically follow that a record amount of ice will melt this summer. More important for determining the size of the annual thaw is the state of the weather as the midnight sun approaches and temperatures rise. But over the more than 30 years of satellite records, scientists have observed a clear pattern of decline, decade-by-decade.
+            </p>
+            <p class="mb-0">The Arctic Ocean freezes every winter and much of the sea-ice then thaws every summer, and that process will continue whatever happens with climate change. Even if the Arctic continues to be one of the fastest-warming regions of the world, it will always be plunged into bitterly cold polar dark every winter. And year-by-year, for all kinds of natural reasons, there’s huge variety of the state of the ice.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END Blogs w/ 3 images & quote & text -->
+    <!-- -------   START PRE-FOOTER 4 - title & description and input    -------- -->
+    <div class="pt-lg-8 py-7 overflow-hidden">
+      <div class="container">
+        <div class="row position-relative">
+          <div class="col-lg-7 text-start my-auto z-index-2">
+            <h2 class="text-dark">Want to try before you buy?</h2>
+            <p class="mb-4">
+              For a start, it does not automatically follow that a record amount of
+              ice will melt this summer. More important for determining the size of
+              the annual thaw is the state of the weather as the midnight sun approaches
+              and temperatures rise.
+            </p>
+            <div class="card card-plain mt-5 mt-lg-0">
+              <form id="contact-form" method="post" autocomplete="off">
+                <div class="card-body ps-0">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="input-group input-group-static mb-4">
+                        <label>First name</label>
+                        <input class="form-control" placeholder="eg. William" aria-label="First Name..." type="text">
+                      </div>
+                    </div>
+                    <div class="col-md-4 ps-2">
+                      <div class="input-group input-group-static mb-4">
+                        <label>Last name</label>
+                        <input type="text" class="form-control" placeholder="eg. Smith" aria-label="Last Name...">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="input-group input-group-static mb-4">
+                      <label>Email Address</label>
+                      <input type="email" class="form-control" placeholder="smith@creative-tim.com" aria-label="Last Name...">
+                    </div>
+                  </div>
+                  <div class="row mt-4">
+                    <div class="col-md-8">
+                      <div class="form-check form-switch d-flex align-items-center">
+                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" checked="">
+                        <label class="form-check-label mb-0 ms-3" for="flexSwitchCheckDefault">I agree to the <a href="javascript:;" class="text-dark font-weight-bold">Terms and Conditions</a></label>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <button type="submit" class="btn bg-gradient-dark mt-4">Schedule a test drive</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-lg-4 position-absolute end-0 me-8 mt-lg-n6">
+            <img class="d-lg-block d-none" src="https://piataauto.md/_i/nwg/201709-10157djxp/750/201709-10157-cjsby-I99W6A2s7n.jpg" alt="g-klasse" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- -------   END PRE-FOOTER 4 - title & description and input    -------- -->
+  </div>
+
+  {% include 'includes/footer-2.html' %}
+  
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+  <script>
+    if (document.getElementsByClassName('glide')) {
+      const glider = new Glide('.gliderrr', {
+        autoplay: 10000,
+        type: 'carousel',
+        perView: 4,
+        breakpoints: {
+          800: {
+            perView: 2
+          }
+        }
+      });
+      // The classname for the element that gets transformed
+      const tiltableElement = '.glide__container';
+      glider.mount();
+    };
+
+    if (document.getElementById('choice-button')) {
+      var element = document.getElementById('choice-button');
+      const example = new Choices(element, {
+        searchEnabled: false
+      });
+
+    }
+    if (document.getElementById('choice-remove-button')) {
+      var element = document.getElementById('choice-remove-button');
+      const example = new Choices(element, {
+        searchEnabled: false
+      });
+    }
+
+    if (document.querySelector('.datepicker')) {
+      flatpickr('.datepicker', {
+        mode: "range"
+      }); // flatpickr
+    }
+
+    if (document.getElementById('language-button')) {
+      var element = document.getElementById('language-button');
+      const example = new Choices(element, {
+        searchEnabled: false
+      });
+
+    }
+    if (document.getElementById('currency-button')) {
+      var element = document.getElementById('currency-button');
+      const example = new Choices(element, {
+        searchEnabled: false
+      });
+    }
+  </script>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+# created by virtualenv automatically*
+
+# Ignore Python bytecode
+__pycache__/
+*.py[cod]
+
+# Ignore virtual environments
+venv/
+.venv/
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore log files and database
+*.log
+*.sqlite3
+

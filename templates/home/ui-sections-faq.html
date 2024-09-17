@@ -1,0 +1,266 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} UI FAQs {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock %}
+
+{% block body_class %} faq-sections {% endblock %}
+
+{% block content %}
+
+  {% include 'includes/navigation-light.html' %}
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-lg-12 mx-auto">
+        <div class="mb-4 w-100 w-md-50 w-lg-25">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="">Page Sections</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Faq</li>
+            </ol>
+          </nav>
+          <h3>FAQ</h3>
+        </div>
+        <div class="position-relative border-radius-xl overflow-hidden shadow-lg mb-7">
+          <div class="container border-bottom">
+            <div class="row justify-space-between py-2">
+              <div class="col-lg-3 me-auto">
+                <p class="lead text-dark pt-1 mb-0">Faq</p>
+              </div>
+              <div class="col-lg-3">
+                <div class="nav-wrapper position-relative end-0">
+                  <ul class="nav nav-pills nav-fill flex-row p-1" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link mb-0 px-0 py-1 active" data-bs-toggle="tab" href="#preview-faq" role="tab" aria-selected="true">
+                        <i class="fas fa-desktop text-sm me-2"></i> Preview
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" href="#code-faq" role="tab" aria-selected="false">
+                        <i class="fas fa-code text-sm me-2"></i> Code
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-content tab-space">
+            <div class="tab-pane active" id="preview-faq">
+              <iframe class="w-100 height-600" srcdoc='<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+        <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+        <!-- Material Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+        <link id="pagestyle" href="https://demos.creative-tim.com/material-kit-pro/assets/css/material-kit-pro.min.css?v=3.0.0" rel="stylesheet" />
+        <section class="py-4">
+  <div class="container">
+    <div class="row my-5">
+      <div class="col-md-6 mx-auto text-center">
+        <h2>Frequently Asked Questions</h2>
+        <p>A lot of people don&#39;t appreciate the moment until it’s passed. I&#39;m not trying my hardest, and I&#39;m not trying to do </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-10 mx-auto">
+        <div class="accordion" id="accordionRental">
+          <div class="accordion-item mb-3">
+            <h5 class="accordion-header" id="headingOne">
+              <button class="accordion-button border-bottom font-weight-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                How do I order?
+                <i class="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0"></i>
+                <i class="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0"></i>
+              </button>
+            </h5>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionRental">
+              <div class="accordion-body text-sm opacity-8">
+                We’re not always in the position that we want to be at. We’re constantly growing. We’re constantly making mistakes. We’re constantly trying to express ourselves and actualize our dreams. If you have the opportunity to play this game
+                of life you need to appreciate every moment. A lot of people don’t appreciate the moment until it’s passed.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item mb-3">
+            <h5 class="accordion-header" id="headingTwo">
+              <button class="accordion-button border-bottom font-weight-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                How can i make the payment?
+                <i class="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0"></i>
+                <i class="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0"></i>
+              </button>
+            </h5>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionRental">
+              <div class="accordion-body text-sm opacity-8">
+                It really matters and then like it really doesn’t matter. What matters is the people who are sparked by it. And the people who are like offended by it, it doesn’t matter. Because it&#39;s about motivating the doers. Because I’m here to follow my dreams and inspire other people to follow their dreams, too.
+                <br>
+                We’re not always in the position that we want to be at. We’re constantly growing. We’re constantly making mistakes. We’re constantly trying to express ourselves and actualize our dreams. If you have the opportunity to play this game of life you need to appreciate every moment. A lot of people don’t appreciate the moment until it’s passed.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item mb-3">
+            <h5 class="accordion-header" id="headingThree">
+              <button class="accordion-button border-bottom font-weight-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                How much time does it take to receive the order?
+                <i class="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0"></i>
+                <i class="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0"></i>
+              </button>
+            </h5>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionRental">
+              <div class="accordion-body text-sm opacity-8">
+                The time is now for it to be okay to be great. People in this world shun people for being great. For being a bright color. For standing out. But the time is now to be okay to be the greatest you. Would you believe in what you believe in, if you were the only one who believed it?
+                If everything I did failed - which it doesn&#39;t, it actually succeeds - just the fact that I&#39;m willing to fail is an inspiration. People are so scared to lose that they don&#39;t even try. Like, one thing people can&#39;t say is that I&#39;m not trying, and I&#39;m not trying my hardest, and I&#39;m not trying to do the best way I know how.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item mb-3">
+            <h5 class="accordion-header" id="headingFour">
+              <button class="accordion-button border-bottom font-weight-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                Can I resell the products?
+                <i class="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0"></i>
+                <i class="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0"></i>
+              </button>
+            </h5>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionRental">
+              <div class="accordion-body text-sm opacity-8">
+                I always felt like I could do anything. That’s the main thing people are controlled by! Thoughts- their perception of themselves! They&#39;re slowed down by their perception of themselves. If you&#39;re taught you can’t do anything, you won’t do anything. I was taught I could do everything.
+                <br><br>
+                If everything I did failed - which it doesn&#39;t, it actually succeeds - just the fact that I&#39;m willing to fail is an inspiration. People are so scared to lose that they don&#39;t even try. Like, one thing people can&#39;t say is that I&#39;m not trying, and I&#39;m not trying my hardest, and I&#39;m not trying to do the best way I know how.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item mb-3">
+            <h5 class="accordion-header" id="headingFifth">
+              <button class="accordion-button border-bottom font-weight-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFifth" aria-expanded="false" aria-controls="collapseFifth">
+                Where do I find the shipping details?
+                <i class="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0"></i>
+                <i class="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0"></i>
+              </button>
+            </h5>
+            <div id="collapseFifth" class="accordion-collapse collapse" aria-labelledby="headingFifth" data-bs-parent="#accordionRental">
+              <div class="accordion-body text-sm opacity-8">
+                There’s nothing I really wanted to do in life that I wasn’t able to get good at. That’s my skill. I’m not really specifically talented at anything except for the ability to learn. That’s what I do. That’s what I’m here for. Don’t be afraid to be wrong because you can’t learn anything from a compliment.
+                I always felt like I could do anything. That’s the main thing people are controlled by! Thoughts- their perception of themselves! They&#39;re slowed down by their perception of themselves. If you&#39;re taught you can’t do anything, you won’t do anything. I was taught I could do everything.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <script src="{{ config.ASSETS_ROOT }}/js/core/bootstrap.min.js" type="text/javascript"></script>
+        <script src="?v=3.0.0" type="text/javascript"></script>
+        '></iframe>
+            </div>
+            <div class="tab-pane" id="code-faq">
+              <div class="position-relative p-4 pb-2">
+                <a class="btn btn-sm bg-gradient-dark position-absolute end-4 mt-3" onclick="copyCode(this);" href="javascript:;"><i class="fas fa-copy text-sm me-1"></i> Copy</a>
+                <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"py-4"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row my-5"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-6 mx-auto text-center"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h2&gt;</span>Frequently Asked Questions<span class="nt">&lt;/h2&gt;</span>
+        <span class="nt">&lt;p&gt;</span>A lot of people don<span class="ni">&amp;#39;</span>t appreciate the moment until it’s passed. I<span class="ni">&amp;#39;</span>m not trying my hardest, and I<span class="ni">&amp;#39;</span>m not trying to do <span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-10 mx-auto"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"accordion"</span> <span class="na">id=</span><span class="s">"accordionRental"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"accordion-item mb-3"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"accordion-header"</span> <span class="na">id=</span><span class="s">"headingOne"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"accordion-button border-bottom font-weight-bold"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-bs-toggle=</span><span class="s">"collapse"</span> <span class="na">data-bs-target=</span><span class="s">"#collapseOne"</span> <span class="na">aria-expanded=</span><span class="s">"true"</span> <span class="na">aria-controls=</span><span class="s">"collapseOne"</span><span class="nt">&gt;</span>
+                How do I order?
+                <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"collapse-close fa fa-plus text-xs pt-1 position-absolute end-0"</span><span class="nt">&gt;&lt;/i&gt;</span>
+                <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"collapse-open fa fa-minus text-xs pt-1 position-absolute end-0"</span><span class="nt">&gt;&lt;/i&gt;</span>
+              <span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;/h5&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapseOne"</span> <span class="na">class=</span><span class="s">"accordion-collapse collapse show"</span> <span class="na">aria-labelledby=</span><span class="s">"headingOne"</span> <span class="na">data-bs-parent=</span><span class="s">"#accordionRental"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"accordion-body text-sm opacity-8"</span><span class="nt">&gt;</span>
+                We’re not always in the position that we want to be at. We’re constantly growing. We’re constantly making mistakes. We’re constantly trying to express ourselves and actualize our dreams. If you have the opportunity to play this game
+                of life you need to appreciate every moment. A lot of people don’t appreciate the moment until it’s passed.
+              <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"accordion-item mb-3"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"accordion-header"</span> <span class="na">id=</span><span class="s">"headingTwo"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"accordion-button border-bottom font-weight-bold"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-bs-toggle=</span><span class="s">"collapse"</span> <span class="na">data-bs-target=</span><span class="s">"#collapseTwo"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapseTwo"</span><span class="nt">&gt;</span>
+                How can i make the payment?
+                <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"collapse-close fa fa-plus text-xs pt-1 position-absolute end-0"</span><span class="nt">&gt;&lt;/i&gt;</span>
+                <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"collapse-open fa fa-minus text-xs pt-1 position-absolute end-0"</span><span class="nt">&gt;&lt;/i&gt;</span>
+              <span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;/h5&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapseTwo"</span> <span class="na">class=</span><span class="s">"accordion-collapse collapse"</span> <span class="na">aria-labelledby=</span><span class="s">"headingTwo"</span> <span class="na">data-bs-parent=</span><span class="s">"#accordionRental"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"accordion-body text-sm opacity-8"</span><span class="nt">&gt;</span>
+                It really matters and then like it really doesn’t matter. What matters is the people who are sparked by it. And the people who are like offended by it, it doesn’t matter. Because it<span class="ni">&amp;#39;</span>s about motivating the doers. Because I’m here to follow my dreams and inspire other people to follow their dreams, too.
+                <span class="nt">&lt;br&gt;</span>
+                We’re not always in the position that we want to be at. We’re constantly growing. We’re constantly making mistakes. We’re constantly trying to express ourselves and actualize our dreams. If you have the opportunity to play this game of life you need to appreciate every moment. A lot of people don’t appreciate the moment until it’s passed.
+              <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"accordion-item mb-3"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"accordion-header"</span> <span class="na">id=</span><span class="s">"headingThree"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"accordion-button border-bottom font-weight-bold"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-bs-toggle=</span><span class="s">"collapse"</span> <span class="na">data-bs-target=</span><span class="s">"#collapseThree"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapseThree"</span><span class="nt">&gt;</span>
+                How much time does it take to receive the order?
+                <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"collapse-close fa fa-plus text-xs pt-1 position-absolute end-0"</span><span class="nt">&gt;&lt;/i&gt;</span>
+                <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"collapse-open fa fa-minus text-xs pt-1 position-absolute end-0"</span><span class="nt">&gt;&lt;/i&gt;</span>
+              <span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;/h5&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapseThree"</span> <span class="na">class=</span><span class="s">"accordion-collapse collapse"</span> <span class="na">aria-labelledby=</span><span class="s">"headingThree"</span> <span class="na">data-bs-parent=</span><span class="s">"#accordionRental"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"accordion-body text-sm opacity-8"</span><span class="nt">&gt;</span>
+                The time is now for it to be okay to be great. People in this world shun people for being great. For being a bright color. For standing out. But the time is now to be okay to be the greatest you. Would you believe in what you believe in, if you were the only one who believed it?
+                If everything I did failed - which it doesn<span class="ni">&amp;#39;</span>t, it actually succeeds - just the fact that I<span class="ni">&amp;#39;</span>m willing to fail is an inspiration. People are so scared to lose that they don<span class="ni">&amp;#39;</span>t even try. Like, one thing people can<span class="ni">&amp;#39;</span>t say is that I<span class="ni">&amp;#39;</span>m not trying, and I<span class="ni">&amp;#39;</span>m not trying my hardest, and I<span class="ni">&amp;#39;</span>m not trying to do the best way I know how.
+              <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"accordion-item mb-3"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"accordion-header"</span> <span class="na">id=</span><span class="s">"headingFour"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"accordion-button border-bottom font-weight-bold"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-bs-toggle=</span><span class="s">"collapse"</span> <span class="na">data-bs-target=</span><span class="s">"#collapseFour"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapseFour"</span><span class="nt">&gt;</span>
+                Can I resell the products?
+                <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"collapse-close fa fa-plus text-xs pt-1 position-absolute end-0"</span><span class="nt">&gt;&lt;/i&gt;</span>
+                <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"collapse-open fa fa-minus text-xs pt-1 position-absolute end-0"</span><span class="nt">&gt;&lt;/i&gt;</span>
+              <span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;/h5&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapseFour"</span> <span class="na">class=</span><span class="s">"accordion-collapse collapse"</span> <span class="na">aria-labelledby=</span><span class="s">"headingFour"</span> <span class="na">data-bs-parent=</span><span class="s">"#accordionRental"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"accordion-body text-sm opacity-8"</span><span class="nt">&gt;</span>
+                I always felt like I could do anything. That’s the main thing people are controlled by! Thoughts- their perception of themselves! They<span class="ni">&amp;#39;</span>re slowed down by their perception of themselves. If you<span class="ni">&amp;#39;</span>re taught you can’t do anything, you won’t do anything. I was taught I could do everything.
+                <span class="nt">&lt;br&gt;&lt;br&gt;</span>
+                If everything I did failed - which it doesn<span class="ni">&amp;#39;</span>t, it actually succeeds - just the fact that I<span class="ni">&amp;#39;</span>m willing to fail is an inspiration. People are so scared to lose that they don<span class="ni">&amp;#39;</span>t even try. Like, one thing people can<span class="ni">&amp;#39;</span>t say is that I<span class="ni">&amp;#39;</span>m not trying, and I<span class="ni">&amp;#39;</span>m not trying my hardest, and I<span class="ni">&amp;#39;</span>m not trying to do the best way I know how.
+              <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"accordion-item mb-3"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"accordion-header"</span> <span class="na">id=</span><span class="s">"headingFifth"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"accordion-button border-bottom font-weight-bold"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-bs-toggle=</span><span class="s">"collapse"</span> <span class="na">data-bs-target=</span><span class="s">"#collapseFifth"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapseFifth"</span><span class="nt">&gt;</span>
+                Where do I find the shipping details?
+                <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"collapse-close fa fa-plus text-xs pt-1 position-absolute end-0"</span><span class="nt">&gt;&lt;/i&gt;</span>
+                <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"collapse-open fa fa-minus text-xs pt-1 position-absolute end-0"</span><span class="nt">&gt;&lt;/i&gt;</span>
+              <span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;/h5&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapseFifth"</span> <span class="na">class=</span><span class="s">"accordion-collapse collapse"</span> <span class="na">aria-labelledby=</span><span class="s">"headingFifth"</span> <span class="na">data-bs-parent=</span><span class="s">"#accordionRental"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"accordion-body text-sm opacity-8"</span><span class="nt">&gt;</span>
+                There’s nothing I really wanted to do in life that I wasn’t able to get good at. That’s my skill. I’m not really specifically talented at anything except for the ability to learn. That’s what I do. That’s what I’m here for. Don’t be afraid to be wrong because you can’t learn anything from a compliment.
+                I always felt like I could do anything. That’s the main thing people are controlled by! Thoughts- their perception of themselves! They<span class="ni">&amp;#39;</span>re slowed down by their perception of themselves. If you<span class="ni">&amp;#39;</span>re taught you can’t do anything, you won’t do anything. I was taught I could do everything.
+              <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/section&gt;</span></code></pre>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% include 'includes/footer-3.html' %}
+  
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock %}

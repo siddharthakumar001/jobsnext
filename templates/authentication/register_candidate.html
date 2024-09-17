@@ -1,0 +1,44 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Candidate Sign Up {% endblock %}
+
+{% block content %}
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-4 col-lg-5 col-md-7 mx-auto">
+                <div class="card z-index-0 mt-sm-8 mt-7 mb-3">
+                    <div class="card-header text-center pt-4 pb-1">
+                        <h4 class="font-weight-bolder mb-1">Sign Up</h4>
+                        <p class="mb-0">Join our network of professionals</p>
+                    </div>
+
+                    <div class="card-body">
+                        <form method="post">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <div class="form-check form-check-info text-left">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    I agree to the <a href="/privacy.html" class="text-dark font-weight-bolder">Terms and Conditions</a>
+                                </label>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn bg-gradient-dark w-100 my-4 mb-2">Sign Up</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="card-footer text-center pt-0 px-lg-2 px-1">
+                        <p class="mb-4 text-sm mx-auto">
+                            Already have an account?
+                            <a href="{% url 'signin' %}" class="text-primary text-gradient font-weight-bold">Sign In</a>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

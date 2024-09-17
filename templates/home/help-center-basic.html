@@ -1,0 +1,205 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Help Basic {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock %}
+
+{% block body_class %} help-center-basic {% endblock %}
+
+{% block content %}
+
+  {% include 'includes/navigation-transparent.html' %}
+
+  <!-- -------- START HEADER 4 w/ search book a ticket form ------- -->
+  <header>
+    <div class="page-header min-vh-50" style="background-image: url('{{ config.ASSETS_ROOT }}/img/bg0.jpg" loading="lazy">
+      <span class="mask bg-gradient-dark opacity-8"></span>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-white text-center">
+            <h2 class="text-white">What do you need?</h2>
+            <p class="lead">We're here to help you for a better understanding. First, let's figure out if we have a solution in our documentation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- -------- END HEADER 4 w/ search book a ticket form ------- -->
+
+  <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6">
+    <section class="py-lg-5">
+      <div class="container">
+        <div class="row border-radius-md py-4 p-3 ps-0">
+          <div class="col-md-10 mb-md-0 mb-2">
+            <div class="input-group input-group-outline">
+              <label class="form-label">Search for your answer</label>
+              <input type="email" class="form-control">
+            </div>
+          </div>
+          <div class="col-md-2 ps-md-0">
+            <button type="button" class="btn bg-gradient-primary w-100 mb-0 h-100 position-relative z-index-2">Search</button>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <p><span class="text-uppercase">Recent Searches:</span><i>"How to downloand my theme", "Request an invoice"..</i></p>
+        </div>
+        <div class="row mt-lg-5 mt-4">
+          <div class="col-lg-4 col-md-6 mb-5">
+            <div class="card">
+              <div class="ps-4 mt-n4">
+                <div class="icon icon-lg icon-shape bg-gradient-primary shadow-primary shadow text-center border-radius-xl">
+                  <i class="material-icons opacity-10">manage_accounts</i>
+                </div>
+              </div>
+              <div class="card-body border-radius-lg position-relative overflow-hidden pb-4">
+                <h5 class="mt-2">Slack bot</h5>
+                <p class="mb-3">If everything I did failed - which it doesn&#39;t, it actually succeeds - just the fact that I&#39;m willing to fail is an inspiration. People are so scared to lose that they don&#39;t even try. And this is sad.</p>
+                <a href="javascript:;" class="font-weight-bold text-xs text-uppercase font-weight-bolder text-primary icon-move-right">
+                  Check more
+                  <i class="fas fa-arrow-right text-xs ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-5">
+            <div class="card mb-3">
+              <div class="ps-4 mt-n4">
+                <div class="icon icon-lg icon-shape bg-gradient-success shadow-success shadow text-center border-radius-xl">
+                  <i class="material-icons opacity-10">face</i>
+                </div>
+              </div>
+              <div class="card-body border-radius-lg position-relative overflow-hidden pb-4">
+                <h5 class="mt-2">Looking great</h5>
+                <p class="mb-3">You have the opportunity to play this game of life you need to appreciate every moment. A lot of people don’t appreciate the moment until it’s motivating the doers.</p>
+                <a href="javascript:;" class="font-weight-bold text-xs text-uppercase font-weight-bolder text-success icon-move-right">
+                  See details
+                  <i class="fas fa-arrow-right text-xs ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-5">
+            <div class="card mb-3">
+              <div class="ps-4 mt-n4">
+                <div class="icon icon-lg icon-shape bg-gradient-warning shadow-warning shadow text-center border-radius-xl">
+                  <i class="material-icons opacity-10">integration_instructions</i>
+                </div>
+              </div>
+              <div class="card-body border-radius-lg position-relative overflow-hidden pb-4 px-sm-5 ">
+                <h5 class="mt-2">Developer First</h5>
+                <p class="mb-3">For standing out. But the time is now to be okay to be the greatest you. Would you believe in what you believe in, if you were the only one who believed it? What do you think?</p>
+                <a href="javascript:;" class="font-weight-bold text-xs text-uppercase font-weight-bolder text-warning icon-move-right">
+                  View journey
+                  <i class="fas fa-arrow-right text-xs ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-5">
+            <div class="card mb-3">
+              <div class="ps-4 mt-n4">
+                <div class="icon icon-lg icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-xl">
+                  <i class="material-icons opacity-10">public</i>
+                </div>
+              </div>
+              <div class="card-body border-radius-lg position-relative overflow-hidden pb-4">
+                <h5 class="mt-2">Prepare launch</h5>
+                <p class="mb-3">Society has put up so many boundaries, so many limitations on what’s right and wrong that it’s almost impossible to get a pure thought out. It’s like a little kid, a little boy.</p>
+                <a href="javascript:;" class="font-weight-bold text-xs text-uppercase font-weight-bolder text-dark icon-move-right">
+                  Check out more
+                  <i class="fas fa-arrow-right text-xs ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-5">
+            <div class="card mb-3">
+              <div class="ps-4 mt-n4">
+                <div class="icon icon-lg icon-shape bg-gradient-info shadow-info shadow text-center border-radius-xl">
+                  <i class="material-icons opacity-10">support</i>
+                </div>
+              </div>
+              <div class="card-body border-radius-lg position-relative overflow-hidden pb-4">
+                <h5 class="mt-2">Premium support</h5>
+                <p class="mb-3">Pink is obviously a better color. Everyone’s born confident, and everything’s taken away from you matters is the people who are sparked by it follow their dreams, too.</p>
+                <a href="javascript:;" class="font-weight-bold text-xs text-uppercase font-weight-bolder text-info icon-move-right">
+                  See all
+                  <i class="fas fa-arrow-right text-xs ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-5">
+            <div class="card mb-3">
+              <div class="ps-4 mt-n4">
+                <div class="icon icon-lg icon-shape bg-gradient-danger shadow-danger shadow text-center border-radius-xl">
+                  <i class="material-icons opacity-10">brush</i>
+                </div>
+              </div>
+              <div class="card-body border-radius-lg position-relative overflow-hidden pb-4">
+                <h5 class="mt-2">Design tools</h5>
+                <p class="mb-3">Constantly growing. We’re constantly making mistakes. We’re constantly trying to express ourselves, find the meaning and actualize our dreams the position that we want to be.</p>
+                <a href="javascript:;" class="font-weight-bold text-xs text-uppercase font-weight-bolder text-danger icon-move-right">
+                  Find story
+                  <i class="fas fa-arrow-right text-xs ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-8 mx-auto text-center">
+            <div class="ms-3 mb-md-5">
+              <h2>If you didn't find the right answer</h2>
+              <p class="lead">Contact us and we'll get back to you ASAP with a solution to whatever issues you're having with the product.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="card card-plain">
+              <form id="contact-form" method="post" autocomplete="off">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="input-group input-group-static mb-4">
+                        <label>Full Name</label>
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col-md-6 ps-md-2">
+                      <div class="input-group input-group-static mb-4">
+                        <label>Email</label>
+                        <input type="email" class="form-control">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="input-group input-group-dynamic mb-4">
+                    <label class="form-label">What can we help you?</label>
+                    <textarea name="message" class="form-control" rows="6"></textarea>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 text-center">
+                      <button type="submit" class="btn bg-gradient-primary mt-4">Submit request</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  {% include 'includes/footer.html' %}
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock %}
