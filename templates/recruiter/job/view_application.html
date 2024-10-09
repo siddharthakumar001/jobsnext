@@ -1,0 +1,130 @@
+<!-- templates/recruiter/job/view_application.html -->
+
+{% extends "layouts/base.html" %}
+{% block title %} Job Details {% endblock %}
+{% load static %}
+
+{% block content %}
+    {% include 'includes/navigation.html' %}
+
+    <header class="header-2">
+        <div class="page-header min-vh-30" style="background-image: url('{% static 'img/bg-application.jpg' %}');" loading="lazy">
+            <span class="mask bg-gradient-info opacity-4"></span>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 text-center mx-auto">
+                        <h1 class="text-white pt-3 mt-n5">Application Details</h1>
+                        <p class="lead text-white mt-3">Review the candidate's application details below.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6">
+        <section class="py-5" id="application-details-section">
+            <div class="container">
+                <!-- Display any messages (success/error) -->
+                {% if messages %}
+                    <div class="row mb-3">
+                        <div class="col-md-12">
+                            {% for message in messages %}
+                                <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endif %}
+
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="card-header text-center">
+                                <h3>{{ application.first_name }} {{ application.last_name }}</h3>
+                            </div>
+                            <div class="card-body">
+                                <!-- Application Details -->
+                                <div class="row mb-3">
+                                    <div class="col-md-4">
+                                        <label><strong>Email:</strong></label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p>{{ application.email }}</p>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-md-4">
+                                        <label><strong>Mobile Number:</strong></label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p>{{ application.country_code }} {{ application.mobile_number }}</p>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-md-4">
+                                        <label><strong>Status:</strong></label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p><span class="badge bg-secondary">{{ application.get_status_display }}</span></p>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-md-4">
+                                        <label><strong>Applied At:</strong></label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p>{{ application.applied_at }}</p>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-md-4">
+                                        <label><strong>Cover Letter:</strong></label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p>{{ application.cover_letter|default:"N/A" }}</p>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-md-4">
+                                        <label><strong>Resume:</strong></label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <a href="{{ application.resume.url }}" target="_blank" class="btn btn-info btn-sm">Download Resume</a>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-md-4">
+                                        <label><strong>Interested in Account:</strong></label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p>{{ application.interested_in_account|yesno:"Yes,No" }}</p>
+                                    </div>
+                                </div>
+
+                                <!-- Action form to change status -->
+                                <form method="post" action="">
+                                    {% csrf_token %}
+                                    <div class="row mb-3">
+                                        <div class="col-md-4">
+                                            <label for="status"><strong>Update Status:</strong></label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <select name="status" id="status" class="form-control">
+                                                {% for choice in application.STATUS_CHOICES %}
+                                                    <option value="{{ choice.0 }}" {% if application.status == choice.0 %} selected {% endif %}>{{ choice.1 }}</option>
+                                                {% endfor %}
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="text-center mt-3">
+                                        <button type="submit" class="btn btn-primary">Update Status</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {% include 'includes/footer.html' %}
+    </div>
+{% endblock content %}

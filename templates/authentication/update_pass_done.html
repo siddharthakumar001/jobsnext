@@ -1,0 +1,12 @@
+<!-- TALENTNEXT/templates/authentication/update_pass_done.html -->
+
+{% extends "base.html" %}
+
+{% block title %}Password Changed{% endblock %}
+
+{% block content %}
+  <div class="container mt-5">
+    <h2>Password Changed Successfully</h2>
+    <p>Your password has been updated. You can now <a href="{% url 'signin' %}">log in</a> with your new password.</p>
+  </div>
+{% endblock content %}

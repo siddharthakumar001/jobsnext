@@ -1,11 +1,97 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recruiter Dashboard</title>
-</head>
-<body>
-    <h1>Welcome to the Recruiter Dashboard</h1>
-</body>
-</html>
+{% extends "layouts/base.html" %}
+
+{% block title %} Recruiter Dashboard {% endblock %}
+{% load static %}
+{% block stylesheets %}
+<!-- Add any specific CSS here if needed -->
+{% endblock %}
+
+{% block body_class %} presentation-page bg-gray-200 {% endblock %}
+
+{% block content %}
+
+  {% include 'includes/navigation.html' %}
+
+  <header class="header-2">
+    <div class="page-header min-vh-75" style="background-image: url('{% static 'img/bg0.jpg' %}')" loading="lazy">
+      <span class="mask bg-gradient-primary opacity-4"></span>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7 text-center mx-auto">
+            <h1 class="text-white pt-3 mt-n5">Recruiter Dashboard</h1>
+            <p class="lead text-white mt-3 px-5">Manage your job postings and track candidates efficiently from your dashboard.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6">
+    <section class="pt-3 pb-4" id="count-stats">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9 z-index-2 border-radius-xl mx-auto py-3">
+            <div class="row">
+              <div class="col-md-4 position-relative">
+                <div class="p-3 text-center">
+                  <h1 class="text-gradient text-primary"><span id="state1" countTo="120">0</span>+</h1>
+                  <h5 class="mt-3">Job Listings</h5>
+                  <p class="text-sm">Manage all your open job listings in one place.</p>
+                </div>
+                <hr class="vertical dark">
+              </div>
+              <div class="col-md-4 position-relative">
+                <div class="p-3 text-center">
+                  <h1 class="text-gradient text-primary"> <span id="state2" countTo="500">0</span>+</h1>
+                  <h5 class="mt-3">Candidates Applied</h5>
+                  <p class="text-sm">Track the candidates who have applied to your listings.</p>
+                </div>
+                <hr class="vertical dark">
+              </div>
+              <div class="col-md-4">
+                <div class="p-3 text-center">
+                  <h1 class="text-gradient text-primary" id="state3" countTo="50">0</h1>
+                  <h5 class="mt-3">Interviews Scheduled</h5>
+                  <p class="text-sm">View the interviews scheduled with potential candidates.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Coming Soon Section -->
+    <section class="py-7">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 mx-auto text-center">
+            <h2 class="mb-0">Coming Soon</h2>
+            <p class="lead">Stay tuned for more features to help you streamline the recruitment process.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {% include 'includes/footer.html' %}
+  </div>
+
+{% endblock content %}
+
+{% block javascripts %}
+  <script type="text/javascript">
+    // CountUp logic
+    if (document.getElementById('state1')) {
+      const countUp = new CountUp('state1', document.getElementById("state1").getAttribute("countTo"));
+      countUp.start();
+    }
+    if (document.getElementById('state2')) {
+      const countUp1 = new CountUp('state2', document.getElementById("state2").getAttribute("countTo"));
+      countUp1.start();
+    }
+    if (document.getElementById('state3')) {
+      const countUp2 = new CountUp('state3', document.getElementById("state3").getAttribute("countTo"));
+      countUp2.start();
+    }
+  </script>
+{% endblock %}

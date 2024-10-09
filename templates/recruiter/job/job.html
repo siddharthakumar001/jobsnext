@@ -1,0 +1,118 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Jobs {% endblock %}
+{% load static %}
+
+{% block content %}
+  {% include 'includes/navigation.html' %}
+
+  <header class="header-2">
+    <div class="page-header min-vh-50" style="background-image: url('{% static 'img/bg-job-listing.jpg' %}');" loading="lazy">
+      <span class="mask bg-gradient-primary opacity-4"></span>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7 text-center mx-auto">
+            <h1 class="text-white pt-3 mt-n5">Jobs</h1>
+            <p class="lead text-white mt-3 px-5">Manage and view your job postings here.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6">
+    <section class="py-5" id="jobs-section">
+      <div class="container">
+
+        <!-- Create Job and Filter Section -->
+        <div class="row justify-content-between align-items-center mb-4">
+          <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+            <a href="{% url 'recruiter:create_job' %}" class="btn btn-primary btn-lg">Create New Job</a>
+          </div>
+          <div class="col-md-8">
+            <form method="get" action="{% url 'recruiter:job_listing' %}">
+              <div class="row g-2 align-items-center">
+                <div class="col-auto">
+                  <label for="status" class="form-label">Filter by Status</label>
+                </div>
+                <div class="col-md-5">
+                  <select class="form-select" id="status" name="status">
+                    <option value="" selected>All Jobs</option>
+                    <option value="draft" {% if request.GET.status == 'draft' %}selected{% endif %}>Draft</option>
+                    <option value="published" {% if request.GET.status == 'published' %}selected{% endif %}>Published</option>
+                    <option value="closed" {% if request.GET.status == 'closed' %}selected{% endif %}>Closed</option>
+                  </select>
+                </div>
+                <div class="col-auto">
+                  <button type="submit" class="btn btn-outline-primary">Filter</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Job Listings -->
+        <div class="row mt-4">
+          {% for job in jobs %}
+          <div class="col-md-6 mb-4">
+            <div class="card shadow-sm h-100">
+              <div class="card-body">
+                <h5 class="card-title">{{ job.title }}</h5>
+                <p class="card-text">{{ job.description|truncatewords:20 }}</p>
+                <p class="text-muted">Status: <span class="badge bg-info text-dark">{{ job.get_status_display }}</span></p>
+                <a href="{% url 'recruiter:job_details' job.id %}" class="btn btn-primary">View Details</a>
+              </div>
+            </div>
+          </div>
+          {% empty %}
+            <div class="col-md-12 text-center">
+              <p>No jobs available. Click "Create New Job" to add one.</p>
+            </div>
+          {% endfor %}
+        </div>
+
+        <!-- Pagination for Jobs -->
+        {% if jobs.paginator.num_pages > 1 %}
+        <nav aria-label="Page navigation">
+          <ul class="pagination justify-content-center">
+            {% if jobs.has_previous %}
+              <li class="page-item">
+                <a class="page-link" href="?page={{ jobs.previous_page_number }}" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+            {% else %}
+              <li class="page-item disabled">
+                <span class="page-link">&laquo;</span>
+              </li>
+            {% endif %}
+
+            {% for num in jobs.paginator.page_range %}
+              {% if jobs.number == num %}
+                <li class="page-item active"><span class="page-link">{{ num }}</span></li>
+              {% elif num > jobs.number|add:'-3' and num < jobs.number|add:'3' %}
+                <li class="page-item"><a class="page-link" href="?page={{ num }}">{{ num }}</a></li>
+              {% endif %}
+            {% endfor %}
+
+            {% if jobs.has_next %}
+              <li class="page-item">
+                <a class="page-link" href="?page={{ jobs.next_page_number }}" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            {% else %}
+              <li class="page-item disabled">
+                <span class="page-link">&raquo;</span>
+              </li>
+            {% endif %}
+          </ul>
+        </nav>
+        {% endif %}
+
+      </div>
+    </section>
+
+    {% include 'includes/footer.html' %}
+  </div>
+{% endblock content %}

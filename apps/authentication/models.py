@@ -1,3 +1,5 @@
+# TALENTNEXT/apps/authentication/models.py
+
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 from django.db import models
 
@@ -30,7 +32,8 @@ class User(AbstractBaseUser, PermissionsMixin):
     username = models.CharField(max_length=150, unique=True)
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
-
+    mobile_number = models.CharField(max_length=15, unique=True, null=True, blank=True)
+    is_first_login = models.BooleanField(default=True)
     # Role choices
     RECRUITER = 'recruiter'
     CANDIDATE = 'candidate'

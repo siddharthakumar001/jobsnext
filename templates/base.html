@@ -27,7 +27,10 @@
     <link id="pagestyle" href="{% static 'css/material-kit-pro.css' %}" rel="stylesheet" />
 
     <!-- Specific Page CSS goes HERE -->
-    {% block stylesheets %}{% endblock %}
+    {% block stylesheets %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    {% endblock %}
 </head>
 
     <body class="{% block body_class %}{% endblock %}">
@@ -38,7 +41,9 @@
         {% include 'includes/scripts.html' %}
 
         <!-- Specific Page JS goes HERE -->
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}
+        <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+        {% endblock %}
         
     </body>
 </html>
