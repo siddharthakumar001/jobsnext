@@ -8,6 +8,8 @@ from django.contrib import messages
 from apps.job.models import Job, Application
 from django.core.paginator import Paginator
 from .forms import JobForm
+from apps.recruiter.tasks import send_email_task
+
 
 User = get_user_model()
 
@@ -141,6 +143,17 @@ def view_application(request, application_id):
             application.status = new_status
             application.save()
             messages.success(request, 'The application status has been updated successfully!')
+            
+            # Trigger email task after updating the status
+            subject = "Your application status has changed"
+            body = f"Dear {application.first_name},\n\nYour application status for the job '{application.job.title}' has been updated to: {new_status}.\n\nBest regards,\nTalentNext Team"
+            
+            # Send email asynchronously using Dramatiq
+            send_email_task.send(
+                subject=subject,
+                message=body,
+                recipient_list=[application.email]
+            )
         else:
             messages.error(request, 'Invalid status selected.')
 

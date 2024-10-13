@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.env.*
+venv/
+talentnext/.env
+media/
+staticfiles/
+node_modules/
+.git/
+.gitignore
+.DS_Store

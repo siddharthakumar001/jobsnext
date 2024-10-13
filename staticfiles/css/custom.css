@@ -1,0 +1,16 @@
+/* Custom styles for the application */
+
+.header-2 {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.profile-card img.avatar {
+    width: 120px;
+    height: 120px;
+}
+
+.card-body .btn {
+    margin-top: 10px;
+}

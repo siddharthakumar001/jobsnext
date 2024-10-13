@@ -1,0 +1,67 @@
+version: '3.8'  # Specify the version if not already
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - rabbitmq
+    networks:
+      - default
+    env_file:
+      - .env
+    environment:
+      - DJANGO_SETTINGS_MODULE=talentnext.settings
+      - PYTHONPATH=/app
+      - DATABASE=MYSQL
+      - DB_HOST=host.docker.internal
+      - DB_PORT=3306
+      - RABBITMQ_URL=amqp://guest:guest@rabbitmq:5672/%2F
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    networks:
+      - default
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+      RABBITMQ_DEFAULT_VHOST: /
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  worker:
+    build:
+      context: .
+      dockerfile: Dockerfile.worker
+    volumes:
+      - .:/app
+    depends_on:
+      rabbitmq:
+        condition: service_healthy  # Uncommented and corrected
+    networks:
+      - default
+    env_file:
+      - .env
+    environment:
+      - DJANGO_SETTINGS_MODULE=talentnext.settings
+      - DB_HOST=host.docker.internal
+      - DB_PORT=3306
+      - PYTHONPATH=/app
+      - RABBITMQ_URL=amqp://guest:guest@rabbitmq:5672/%2F
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    command: sh -c "sleep 60 && dramatiq apps.recruiter.tasks --queues default"
