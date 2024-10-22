@@ -1,5 +1,3 @@
-# TALENTNEXT/Dockerfile
-
 FROM python:3.12-slim
 
 ENV PYTHONDONTWRITEBYTECODE=1
@@ -10,12 +8,11 @@ WORKDIR /app
 # Install system dependencies
 RUN apt-get update && \
     apt-get install -y build-essential libmariadb-dev-compat libmariadb-dev netcat-openbsd && \
-    rm -rf /var/lib/apt/lists/*
+    apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Install Python dependencies
 COPY requirements.txt /app/
 RUN pip install --upgrade pip
-# Increase the timeout to 100 seconds
 RUN pip install --default-timeout=100 -r requirements.txt
 
 # Copy project

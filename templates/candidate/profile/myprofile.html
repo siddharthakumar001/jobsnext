@@ -2,12 +2,6 @@
 
 {% block title %} My Profile {% endblock %}
 {% load static %}
-{% block stylesheets %}
-<!-- Add any specific CSS styles if needed -->
-{% endblock %}
-
-{% block body_class %} profile-page bg-gray-200 {% endblock %}
-
 {% block content %}
     {% include 'includes/navigation.html' %}
 
@@ -45,7 +39,7 @@
                                 <h6>Profile Information</h6>
                             </div>
                             <div class="card-body">
-                                <form method="POST" action="{% url 'candidate:candidate_profile' %}">
+                                <form method="POST" enctype="multipart/form-data" action="{% url 'candidate:candidate_profile' %}">
                                     {% csrf_token %}
                                     <div class="form-group mb-3">
                                         <label for="first_name" class="form-label">First Name</label>
@@ -56,17 +50,40 @@
                                         <input type="text" class="form-control" id="last_name" name="last_name" value="{{ user.last_name }}" required>
                                     </div>
                                     <div class="form-group mb-3">
-                                        <label for="email" class="form-label">Email</label>
-                                        <input type="email" class="form-control" id="email" name="email" value="{{ user.email }}" required>
-                                    </div>
-                                    <div class="form-group mb-3">
                                         <label for="username" class="form-label">Username</label>
                                         <input type="text" class="form-control" id="username" name="username" value="{{ user.username }}" required>
                                     </div>
+
+                                    <!-- Section to upload multiple CVs -->
                                     <div class="form-group mb-3">
-                                        <label for="role" class="form-label">Role</label>
-                                        <input type="text" class="form-control" id="role" name="role" value="{{ user.role }}" readonly>
+                                        <label for="cvs" class="form-label">Upload CVs (Word/PDF only)</label>
+                                        <input type="file" class="form-control" id="cvs" name="cvs" multiple accept=".pdf,.doc,.docx">
+                                        <small class="form-text text-muted">You can upload up to 10 CVs</small>
                                     </div>
+
+                                    <!-- Section to upload multiple IDs -->
+                                    <div class="form-group mb-3">
+                                        <label for="ids" class="form-label">Upload IDs (PDF/PNG/JPEG)</label>
+                                        <input type="file" class="form-control" id="ids" name="ids" multiple accept=".pdf,.png,.jpeg,.jpg">
+                                        <small class="form-text text-muted">You can upload up to 10 IDs</small>
+                                    </div>
+
+                                    <!-- Display existing uploaded documents -->
+                                    <h6>Uploaded Documents</h6>
+                                    <ul class="list-group mb-3">
+                                        {% for doc in uploaded_docs %}
+                                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                {{ doc.file.name }}
+                                                <div>
+                                                    <a href="{{ doc.file.url }}" class="btn btn-sm btn-secondary" download>Download</a>
+                                                    <a href="{% url 'candidate:delete_document' doc.id %}" class="btn btn-sm btn-danger">Delete</a>
+                                                </div>
+                                            </li>
+                                        {% empty %}
+                                            <li class="list-group-item">No documents uploaded.</li>
+                                        {% endfor %}
+                                    </ul>
+
                                     <button type="submit" class="btn btn-primary">Save Changes</button>
                                 </form>
                             </div>
@@ -79,7 +96,3 @@
         {% include 'includes/footer.html' %}
     </div>
 {% endblock content %}
-
-{% block javascripts %}
-<!-- Add any specific JavaScript if needed -->
-{% endblock %}
